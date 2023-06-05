@@ -9,7 +9,7 @@
 ////////// DISPL ////////////
 //extern SPI_HandleTypeDef hspi1;
 //#define DISP_SPI_PTR     &hspi1
-#define DISP_SPI         SPI1
+#define DISP_SPI         SPI0
 
 ////////////////////////////////////// настройка пинов /////////////////////////////////////
 #define DISP_CS_SELECT      gpio_bit_reset(TFT_CS_GPIO_Port, TFT_CS_Pin)
@@ -83,7 +83,7 @@ void ILI9341_Draw_Filled_Rectangle_Size_Text(uint16_t X0, uint16_t Y0, uint16_t 
 //65K colour (2Bytes / Pixel)
 void ILI9341_Draw_Image(const char *image_array, uint16_t x_coordinat, uint16_t y_coordinat, uint16_t img_width, uint16_t img_height, uint32_t s_img);
 
-void ILI9341_WriteString(uint16_t x, uint16_t y, const char* str, FontDef font, uint16_t color, uint16_t bgcolor);
+//void ILI9341_WriteString(uint16_t x, uint16_t y, const char* str, FontDef font, uint16_t color, uint16_t bgcolor);
 
 void ILI9341_Random_line(int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color);
 

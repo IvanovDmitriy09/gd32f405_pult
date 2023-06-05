@@ -81,7 +81,7 @@ gd32f405_template.elf: $(OBJS) $(USER_OBJS) makefile objects.mk $(OPTIONAL_TOOL_
 
 gd32f405_template.hex: gd32f405_template.elf makefile objects.mk $(OPTIONAL_TOOL_DEPS)
 	@echo 'Invoking: GNU Arm Cross Create Flash Image'
-	arm-none-eabi-objcopy -O ihex "gd32f405_template.elf"  "gd32f405_template.hex"
+	arm-none-eabi-objcopy -O ihex -j .text -j .data "gd32f405_template.elf"  "gd32f405_template.hex"
 	@echo 'Finished building: $@'
 	@echo ' '
 

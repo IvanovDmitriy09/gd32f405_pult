@@ -28,9 +28,12 @@ extern "C" {
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-//#include "stm32f1xx_hal.h"
+#include "stdlib.h"
 #include "stdint.h"
-#include "gd32f4xx_gpio.h"
+#include "gd32f4xx_libopt.h"
+#include "systick.h"
+
+#include "ILI9341_GFX.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -61,8 +64,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define TOUCH_CS_Pin GPIO_PIN_0
-#define TOUCH_CS_GPIO_Port GPIOB
+//#define TOUCH_CS_Pin GPIO_PIN_0
+//#define TOUCH_CS_GPIO_Port GPIOB
 #define TFT_CS_Pin GPIO_PIN_1
 #define TFT_CS_GPIO_Port GPIOB
 #define IRQ_Pin GPIO_PIN_2

@@ -9,6 +9,7 @@
 #define FONTS_H_
 
 #include "main.h"
+#include "ILI9341_GFX.h"
 
 typedef struct {
     const uint8_t width;

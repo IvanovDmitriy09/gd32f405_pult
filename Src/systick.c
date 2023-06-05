@@ -1,6 +1,6 @@
 /*!
-    \file    gd32f4xx_libopt.h
-    \brief   library optional for gd32f4xx
+    \file    systick.c
+    \brief   the systick configuration file
 
     \version 2016-08-15, V1.0.0, firmware for GD32F4xx
     \version 2018-12-12, V2.0.0, firmware for GD32F4xx
@@ -35,54 +35,52 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 OF SUCH DAMAGE.
 */
 
+#include "gd32f4xx.h"
+#include "systick.h"
 
+uint32_t delay;
 
-#ifndef GD32F4XX_LIBOPT_H
-#define GD32F4XX_LIBOPT_H
-#define GD32F405
+/*!
+    \brief      configure systick
+    \param[in]  none
+    \param[out] none
+    \retval     none
+*/
+void systick_config(void)
+{
+    /* setup systick timer for 1000Hz interrupts */
+    if(SysTick_Config(SystemCoreClock / 1000U)) {
+        /* capture error */
+        while(1) {
+        }
+    }
+    /* configure the systick handler priority */
+    NVIC_SetPriority(SysTick_IRQn, 0x00U);
+}
 
-#if defined (GD32F450) || defined (GD32F405) || defined (GD32F407) || defined (GD32F470) || defined (GD32F425) || defined (GD32F427)
-#include "gd32f4xx_rcu.h"
-#include "gd32f4xx_adc.h"
-#include "gd32f4xx_can.h"
-#include "gd32f4xx_crc.h"
-#include "gd32f4xx_ctc.h"
-#include "gd32f4xx_dac.h"
-#include "gd32f4xx_dbg.h"
-#include "gd32f4xx_dci.h"
-#include "gd32f4xx_dma.h"
-#include "gd32f4xx_exti.h"
-#include "gd32f4xx_fmc.h"
-#include "gd32f4xx_fwdgt.h"
-#include "gd32f4xx_gpio.h"
-#include "gd32f4xx_syscfg.h"
-#include "gd32f4xx_i2c.h"
-#include "gd32f4xx_iref.h"
-#include "gd32f4xx_pmu.h"
-#include "gd32f4xx_rtc.h"
-#include "gd32f4xx_sdio.h"
-#include "gd32f4xx_spi.h"
-#include "gd32f4xx_timer.h"
-#include "gd32f4xx_trng.h"
-#include "gd32f4xx_usart.h"
-#include "gd32f4xx_wwdgt.h"
-#include "gd32f4xx_misc.h"
+/*!
+    \brief      delay a time in milliseconds
+    \param[in]  count: count in milliseconds
+    \param[out] none
+    \retval     none
+*/
+void delay_1ms(uint32_t count)
+{
+    delay = count;
 
-#endif
+    while(0U != delay) {
+    }
+}
 
-#if defined (GD32F450) || defined (GD32F470)
-#include "gd32f4xx_enet.h"
-#include "gd32f4xx_exmc.h"
-#include "gd32f4xx_ipa.h"
-#include "gd32f4xx_tli.h"
-#endif
-
-#if defined (GD32F407) || defined (GD32F427)
-#include "gd32f4xx_enet.h"
-#include "gd32f4xx_exmc.h"
-#endif
-
-
-#include "main.h"
-
-#endif /* GD32F4XX_LIBOPT_H */
+/*!
+    \brief      delay decrement
+    \param[in]  none
+    \param[out] none
+    \retval     none
+*/
+void delay_decrement(void)
+{
+    if(0U != delay) {
+        delay--;
+    }
+}

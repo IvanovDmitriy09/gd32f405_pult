@@ -1,8 +1,8 @@
 System/Src/gd32f4xx/gd32f4xx_tli.o: ../System/Src/gd32f4xx/gd32f4xx_tli.c \
  ../System/Inc/gd32f4xx/gd32f4xx_tli.h ../System/Inc/CMSIS/gd32f4xx.h \
- ../System/Inc/CMSIS/core_cm4.h ../System/Inc/CMSIS/cmsis_version.h \
- ../System/Inc/CMSIS/cmsis_compiler.h ../System/Inc/CMSIS/cmsis_gcc.h \
- ../System/Inc/CMSIS/mpu_armv7.h ../System/Inc/CMSIS/system_gd32f4xx.h \
+ ../System/Inc/CMSIS/core_cm4.h ../System/Inc/CMSIS/core_cmInstr.h \
+ ../System/Inc/CMSIS/core_cmFunc.h ../System/Inc/CMSIS/core_cm4_simd.h \
+ ../System/Inc/CMSIS/system_gd32f4xx.h \
  ../System/Inc/CMSIS/gd32f4xx_libopt.h \
  ../System/Inc/gd32f4xx/gd32f4xx_rcu.h \
  ../System/Inc/gd32f4xx/gd32f4xx_adc.h \
@@ -28,7 +28,9 @@ System/Src/gd32f4xx/gd32f4xx_tli.o: ../System/Src/gd32f4xx/gd32f4xx_tli.c \
  ../System/Inc/gd32f4xx/gd32f4xx_trng.h \
  ../System/Inc/gd32f4xx/gd32f4xx_usart.h \
  ../System/Inc/gd32f4xx/gd32f4xx_wwdgt.h \
- ../System/Inc/gd32f4xx/gd32f4xx_misc.h
+ ../System/Inc/gd32f4xx/gd32f4xx_misc.h ../Inc/main.h \
+ ../System/Inc/CMSIS/gd32f4xx_libopt.h ../Inc/systick.h \
+ ../Inc/ILI9341_GFX.h ../Inc/main.h ../Inc/fonts.h
 
 ../System/Inc/gd32f4xx/gd32f4xx_tli.h:
 
@@ -36,13 +38,11 @@ System/Src/gd32f4xx/gd32f4xx_tli.o: ../System/Src/gd32f4xx/gd32f4xx_tli.c \
 
 ../System/Inc/CMSIS/core_cm4.h:
 
-../System/Inc/CMSIS/cmsis_version.h:
+../System/Inc/CMSIS/core_cmInstr.h:
 
-../System/Inc/CMSIS/cmsis_compiler.h:
+../System/Inc/CMSIS/core_cmFunc.h:
 
-../System/Inc/CMSIS/cmsis_gcc.h:
-
-../System/Inc/CMSIS/mpu_armv7.h:
+../System/Inc/CMSIS/core_cm4_simd.h:
 
 ../System/Inc/CMSIS/system_gd32f4xx.h:
 
@@ -97,3 +97,15 @@ System/Src/gd32f4xx/gd32f4xx_tli.o: ../System/Src/gd32f4xx/gd32f4xx_tli.c \
 ../System/Inc/gd32f4xx/gd32f4xx_wwdgt.h:
 
 ../System/Inc/gd32f4xx/gd32f4xx_misc.h:
+
+../Inc/main.h:
+
+../System/Inc/CMSIS/gd32f4xx_libopt.h:
+
+../Inc/systick.h:
+
+../Inc/ILI9341_GFX.h:
+
+../Inc/main.h:
+
+../Inc/fonts.h:

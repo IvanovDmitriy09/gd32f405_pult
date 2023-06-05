@@ -7,6 +7,7 @@ C_SRCS += \
 ../Src/ILI9341_GFX.c \
 ../Src/fonts.c \
 ../Src/main.c \
+../Src/systick.c \
 ../Src/timer.c \
 ../Src/write.c \
 ../Src/xpt2046_touch.c 
@@ -15,6 +16,7 @@ OBJS += \
 ./Src/ILI9341_GFX.o \
 ./Src/fonts.o \
 ./Src/main.o \
+./Src/systick.o \
 ./Src/timer.o \
 ./Src/write.o \
 ./Src/xpt2046_touch.o 
@@ -23,6 +25,7 @@ C_DEPS += \
 ./Src/ILI9341_GFX.d \
 ./Src/fonts.d \
 ./Src/main.d \
+./Src/systick.d \
 ./Src/timer.d \
 ./Src/write.d \
 ./Src/xpt2046_touch.d 

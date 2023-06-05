@@ -1,10 +1,9 @@
-System/Src/diag/trace-impl.o: ../System/Src/diag/trace-impl.c \
- ../System/Inc/CMSIS/cmsis_device.h ../System/Inc/CMSIS/gd32f4xx.h \
+Src/systick.o: ../Src/systick.c ../System/Inc/CMSIS/gd32f4xx.h \
  ../System/Inc/CMSIS/core_cm4.h ../System/Inc/CMSIS/core_cmInstr.h \
  ../System/Inc/CMSIS/core_cmFunc.h ../System/Inc/CMSIS/core_cm4_simd.h \
  ../System/Inc/CMSIS/system_gd32f4xx.h \
  ../System/Inc/CMSIS/gd32f4xx_libopt.h \
- ../System/Inc/gd32f4xx/gd32f4xx_rcu.h ../System/Inc/CMSIS/gd32f4xx.h \
+ ../System/Inc/gd32f4xx/gd32f4xx_rcu.h \
  ../System/Inc/gd32f4xx/gd32f4xx_adc.h \
  ../System/Inc/gd32f4xx/gd32f4xx_can.h \
  ../System/Inc/gd32f4xx/gd32f4xx_crc.h \
@@ -30,10 +29,7 @@ System/Src/diag/trace-impl.o: ../System/Src/diag/trace-impl.c \
  ../System/Inc/gd32f4xx/gd32f4xx_wwdgt.h \
  ../System/Inc/gd32f4xx/gd32f4xx_misc.h ../Inc/main.h \
  ../System/Inc/CMSIS/gd32f4xx_libopt.h ../Inc/systick.h \
- ../Inc/ILI9341_GFX.h ../Inc/main.h ../Inc/fonts.h \
- ../System/Inc/diag/trace.h ../System/Inc/arm/semihosting.h
-
-../System/Inc/CMSIS/cmsis_device.h:
+ ../Inc/ILI9341_GFX.h ../Inc/main.h ../Inc/fonts.h ../Inc/systick.h
 
 ../System/Inc/CMSIS/gd32f4xx.h:
 
@@ -50,8 +46,6 @@ System/Src/diag/trace-impl.o: ../System/Src/diag/trace-impl.c \
 ../System/Inc/CMSIS/gd32f4xx_libopt.h:
 
 ../System/Inc/gd32f4xx/gd32f4xx_rcu.h:
-
-../System/Inc/CMSIS/gd32f4xx.h:
 
 ../System/Inc/gd32f4xx/gd32f4xx_adc.h:
 
@@ -113,6 +107,4 @@ System/Src/diag/trace-impl.o: ../System/Src/diag/trace-impl.c \
 
 ../Inc/fonts.h:
 
-../System/Inc/diag/trace.h:
-
-../System/Inc/arm/semihosting.h:
+../Inc/systick.h:

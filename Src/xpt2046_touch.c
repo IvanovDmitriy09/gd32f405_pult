@@ -18,9 +18,9 @@
 #define TOUCH_MIN_RAW_Y 2500
 #define TOUCH_MAX_RAW_Y 30000
 
-static const uint8_t cmd_read_x = 0x90;
-static const uint8_t cmd_read_y = 0xD0;
-static const uint8_t zeroes_tx[] = {0x00, 0x00};
+//static const uint8_t cmd_read_x = 0x90;
+//static const uint8_t cmd_read_y = 0xD0;
+//static const uint8_t zeroes_tx[] = {0x00, 0x00};
 
 // калибровка
 /*#include "string.h"
@@ -28,8 +28,8 @@ static const uint8_t zeroes_tx[] = {0x00, 0x00};
 extern UART_HandleTypeDef huart1;*/
 
 
-uint8_t ILI9341_TouchGetCoordinates(uint16_t *x, uint16_t *y)
-{
+//uint8_t ILI9341_TouchGetCoordinates(uint16_t *x, uint16_t *y)
+//{
 //	if(HAL_GPIO_ReadPin(IRQ_GPIO_Port, IRQ_Pin) != GPIO_PIN_RESET) return 0;
 //
 //    TOUCH_CS_SELECT;
@@ -65,7 +65,7 @@ uint8_t ILI9341_TouchGetCoordinates(uint16_t *x, uint16_t *y)
 //
 //    *x = (avg_x - TOUCH_MIN_RAW_X) * TOUCH_SCALE_X / (TOUCH_MAX_RAW_X - TOUCH_MIN_RAW_X);
 //    *y = (avg_y - TOUCH_MIN_RAW_Y) * TOUCH_SCALE_Y / (TOUCH_MAX_RAW_Y - TOUCH_MIN_RAW_Y);
-
-    return 1;
-}
+//
+//    return 1;
+//}
 
