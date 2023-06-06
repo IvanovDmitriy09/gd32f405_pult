@@ -11,6 +11,15 @@
 //#define DISP_SPI_PTR     &hspi1
 #define DISP_SPI         SPI0
 
+#define TFT_CS_Pin GPIO_PIN_4
+#define TFT_CS_GPIO_Port GPIOA
+//#define IRQ_Pin GPIO_PIN_2
+//#define IRQ_GPIO_Port GPIOB
+#define TFT_RST_Pin GPIO_PIN_5
+#define TFT_RST_GPIO_Port GPIOC
+#define TFT_DC_Pin GPIO_PIN_4
+#define TFT_DC_GPIO_Port GPIOC
+
 ////////////////////////////////////// настройка пинов /////////////////////////////////////
 #define DISP_CS_SELECT      gpio_bit_reset(TFT_CS_GPIO_Port, TFT_CS_Pin)
 #define DISP_CS_UNSELECT    gpio_bit_set(TFT_CS_GPIO_Port, TFT_CS_Pin)

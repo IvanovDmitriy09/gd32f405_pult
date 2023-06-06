@@ -103,9 +103,9 @@ void ILI9341_Set_Address(uint16_t X1, uint16_t Y1, uint16_t X2, uint16_t Y2)
 void ILI9341_Reset(void)
 {
 	DISP_RST_RESET;
-	delay_1ms(200);
+	timer_sleep (200);
 	DISP_CS_SELECT;
-	delay_1ms(200);
+	timer_sleep (200);
 	DISP_RST_WORK;
 }
 
@@ -157,7 +157,7 @@ void ILI9341_Init(void)
 
 	//SOFTWARE RESET
 	ILI9341_Write_Command(0x01);
-	delay_1ms(1000);
+	timer_sleep (1000);
 
 	//POWER CONTROL A
 	ILI9341_Write_Command(0xCB);
@@ -277,7 +277,7 @@ void ILI9341_Init(void)
 
 	//EXIT SLEEP
 	ILI9341_Write_Command(0x11);
-	delay_1ms(120);
+	timer_sleep (120);
 
 	//TURN ON DISPLAY
 	ILI9341_Write_Command(0x29);

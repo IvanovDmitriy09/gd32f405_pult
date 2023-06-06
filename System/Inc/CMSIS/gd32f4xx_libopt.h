@@ -35,11 +35,10 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 OF SUCH DAMAGE.
 */
 
-
+#define GD32F405
 
 #ifndef GD32F4XX_LIBOPT_H
 #define GD32F4XX_LIBOPT_H
-#define GD32F405
 
 #if defined (GD32F450) || defined (GD32F405) || defined (GD32F407) || defined (GD32F470) || defined (GD32F425) || defined (GD32F427)
 #include "gd32f4xx_rcu.h"
@@ -67,7 +66,6 @@ OF SUCH DAMAGE.
 #include "gd32f4xx_usart.h"
 #include "gd32f4xx_wwdgt.h"
 #include "gd32f4xx_misc.h"
-
 #endif
 
 #if defined (GD32F450) || defined (GD32F470)
@@ -81,8 +79,5 @@ OF SUCH DAMAGE.
 #include "gd32f4xx_enet.h"
 #include "gd32f4xx_exmc.h"
 #endif
-
-
-#include "main.h"
 
 #endif /* GD32F4XX_LIBOPT_H */

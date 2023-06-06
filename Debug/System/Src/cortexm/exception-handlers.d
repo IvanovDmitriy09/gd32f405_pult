@@ -30,10 +30,8 @@ System/Src/cortexm/exception-handlers.o: \
  ../System/Inc/gd32f4xx/gd32f4xx_trng.h \
  ../System/Inc/gd32f4xx/gd32f4xx_usart.h \
  ../System/Inc/gd32f4xx/gd32f4xx_wwdgt.h \
- ../System/Inc/gd32f4xx/gd32f4xx_misc.h ../Inc/main.h \
- ../System/Inc/CMSIS/gd32f4xx_libopt.h ../Inc/systick.h \
- ../Inc/ILI9341_GFX.h ../Inc/main.h ../Inc/fonts.h \
- ../System/Inc/arm/semihosting.h ../System/Inc/diag/trace.h
+ ../System/Inc/gd32f4xx/gd32f4xx_misc.h ../System/Inc/arm/semihosting.h \
+ ../System/Inc/diag/trace.h
 
 ../System/Inc/cortexm/exception-handlers.h:
 
@@ -104,18 +102,6 @@ System/Src/cortexm/exception-handlers.o: \
 ../System/Inc/gd32f4xx/gd32f4xx_wwdgt.h:
 
 ../System/Inc/gd32f4xx/gd32f4xx_misc.h:
-
-../Inc/main.h:
-
-../System/Inc/CMSIS/gd32f4xx_libopt.h:
-
-../Inc/systick.h:
-
-../Inc/ILI9341_GFX.h:
-
-../Inc/main.h:
-
-../Inc/fonts.h:
 
 ../System/Inc/arm/semihosting.h:
 

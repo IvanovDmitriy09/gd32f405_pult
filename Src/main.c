@@ -33,10 +33,14 @@
 #include "timer.h"
 
 #include "main.h"
+#include "img.h"
+
+int main(int argc, char *argv[]);
 
 void rcu_config(void);
 void gpio_config(void);
 void spi_config(void);
+
 // ----------------------------------------------------------------------------
 //
 // Print a greeting message on the trace device and enter a loop
@@ -52,15 +56,17 @@ void spi_config(void);
 
 // Sample pragmas to cope with warnings. Please note the related line at
 // the end of this function, used to pop the compiler diagnostics status.
-//#pragma GCC diagnostic push
-//#pragma GCC diagnostic ignored "-Wunused-parameter"
-//#pragma GCC diagnostic ignored "-Wmissing-declarations"
-//#pragma GCC diagnostic ignored "-Wreturn-type"
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunused-parameter"
+#pragma GCC diagnostic ignored "-Wmissing-declarations"
+#pragma GCC diagnostic ignored "-Wreturn-type"
 
-void main(void) {
-	//nvic_irq_enable(SPI0_IRQn, 1, 1);
+int main(int argc, char *argv[]) {
 
-	systick_config();
+	nvic_irq_enable(SPI0_IRQn, 1, 1);
+
+	//systick_config();
+	timer_start();
 	/* enable peripheral clock */
 	rcu_config();
 	/* configure GPIO */
@@ -69,11 +75,23 @@ void main(void) {
 	spi_config();
 	spi_enable(SPI0);
 	// Infinite loop
+
+	DISP_CS_UNSELECT;
+
+	ILI9341_Init();
+
+	ILI9341_Set_Rotation(SCREEN_VERTICAL_1);
+
+	ILI9341_Fill_Screen(BLACK);
+
+	uint16_t size_img = sizeof(img_logo);
+
+	ILI9341_Draw_Image(img_logo, 30, 30, 240, 240, size_img);
 	while (1) {
 		gpio_bit_set(GPIOB, GPIO_PIN_0);
-		delay_1ms(500);
+		timer_sleep(1000);
 		gpio_bit_reset(GPIOB, GPIO_PIN_0);
-		delay_1ms(500);
+		timer_sleep(1000);
 	}
 	// Infinite loop, never return.
 }
@@ -89,23 +107,23 @@ void gpio_config(void) {
 	/* configure SPI1 GPIO */
 	gpio_af_set(GPIOA, GPIO_AF_5, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7);
 	gpio_mode_set(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE,
-			GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7);
+	GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7);
 	gpio_output_options_set(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ,
-			GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7);
+	GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7);
 
 	/*DISP_CS*/
 	gpio_mode_set(GPIOA, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO_PIN_4);
 	gpio_output_options_set(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ,
-			GPIO_PIN_4);
+	GPIO_PIN_4);
 	/*DISP_LED*/
 	gpio_mode_set(GPIOB, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO_PIN_0);
 	gpio_output_options_set(GPIOB, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ,
-			GPIO_PIN_0);
+	GPIO_PIN_0);
 	/*DISP_DC  DISP_RST*/
 	gpio_mode_set(GPIOC, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE,
-			GPIO_PIN_4 | GPIO_PIN_5);
+	GPIO_PIN_4 | GPIO_PIN_5);
 	gpio_output_options_set(GPIOC, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ,
-			GPIO_PIN_4 | GPIO_PIN_5);
+	GPIO_PIN_4 | GPIO_PIN_5);
 }
 
 void spi_config(void) {
@@ -114,14 +132,14 @@ void spi_config(void) {
 	/* configure SPI1 parameter */
 	spi_init_struct.trans_mode = SPI_TRANSMODE_FULLDUPLEX;
 	spi_init_struct.device_mode = SPI_MASTER;
-	;
+
 	spi_init_struct.frame_size = SPI_FRAMESIZE_8BIT;
-	;
-	spi_init_struct.clock_polarity_phase = SPI_CK_PL_LOW_PH_2EDGE;
+
+	spi_init_struct.clock_polarity_phase = SPI_CK_PL_LOW_PH_1EDGE;
 	spi_init_struct.nss = SPI_NSS_SOFT;
-	spi_init_struct.prescale = SPI_PSC_32;
+	spi_init_struct.prescale = SPI_PSC_2;
 	spi_init_struct.endian = SPI_ENDIAN_MSB;
-	;
+
 	spi_init(SPI0, &spi_init_struct);
 
 #if SPI_CRC_ENABLE

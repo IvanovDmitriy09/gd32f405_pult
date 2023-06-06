@@ -34,10 +34,10 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSI
 OF SUCH DAMAGE.
 */
 
+#define GD32F405
+
 #ifndef GD32F4XX_H
 #define GD32F4XX_H
-
-#define GD32F405
 
 #ifdef __cplusplus
  extern "C" {

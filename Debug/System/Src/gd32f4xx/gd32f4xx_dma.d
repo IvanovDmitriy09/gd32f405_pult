@@ -27,9 +27,7 @@ System/Src/gd32f4xx/gd32f4xx_dma.o: ../System/Src/gd32f4xx/gd32f4xx_dma.c \
  ../System/Inc/gd32f4xx/gd32f4xx_trng.h \
  ../System/Inc/gd32f4xx/gd32f4xx_usart.h \
  ../System/Inc/gd32f4xx/gd32f4xx_wwdgt.h \
- ../System/Inc/gd32f4xx/gd32f4xx_misc.h ../Inc/main.h \
- ../System/Inc/CMSIS/gd32f4xx_libopt.h ../Inc/systick.h \
- ../Inc/ILI9341_GFX.h ../Inc/main.h ../Inc/fonts.h
+ ../System/Inc/gd32f4xx/gd32f4xx_misc.h
 
 ../System/Inc/gd32f4xx/gd32f4xx_dma.h:
 
@@ -94,15 +92,3 @@ System/Src/gd32f4xx/gd32f4xx_dma.o: ../System/Src/gd32f4xx/gd32f4xx_dma.c \
 ../System/Inc/gd32f4xx/gd32f4xx_wwdgt.h:
 
 ../System/Inc/gd32f4xx/gd32f4xx_misc.h:
-
-../Inc/main.h:
-
-../System/Inc/CMSIS/gd32f4xx_libopt.h:
-
-../Inc/systick.h:
-
-../Inc/ILI9341_GFX.h:
-
-../Inc/main.h:
-
-../Inc/fonts.h:

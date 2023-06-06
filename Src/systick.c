@@ -64,7 +64,7 @@ void systick_config(void)
     \param[out] none
     \retval     none
 */
-void delay_1ms(uint32_t count)
+void delay_ms(uint32_t count)
 {
     delay = count;
 
