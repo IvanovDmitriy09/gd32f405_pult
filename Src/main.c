@@ -63,7 +63,7 @@ void spi_config(void);
 
 int main(int argc, char *argv[]) {
 
-	nvic_irq_enable(SPI0_IRQn, 1, 1);
+	//nvic_irq_enable(SPI0_IRQn, 0, 1);
 
 	//systick_config();
 	timer_start();
@@ -73,10 +73,12 @@ int main(int argc, char *argv[]) {
 	gpio_config();
 	/* configure SPI*/
 	spi_config();
-	spi_enable(SPI0);
-	// Infinite loop
+
+	gpio_bit_set(GPIOB, GPIO_PIN_0);
 
 	DISP_CS_UNSELECT;
+	spi_enable(SPI0);
+
 
 	ILI9341_Init();
 
@@ -84,14 +86,14 @@ int main(int argc, char *argv[]) {
 
 	ILI9341_Fill_Screen(BLACK);
 
-	uint16_t size_img = sizeof(img_logo);
+	uint32_t size_img = sizeof(img_logo);
 
-	ILI9341_Draw_Image(img_logo, 30, 30, 240, 240, size_img);
+
 	while (1) {
-		gpio_bit_set(GPIOB, GPIO_PIN_0);
-		timer_sleep(1000);
-		gpio_bit_reset(GPIOB, GPIO_PIN_0);
-		timer_sleep(1000);
+		ILI9341_Draw_Image(img_logo, 40, 0, 240, 240, size_img);
+		timer_sleep (3000);
+		ILI9341_Draw_Image(img_logo1, 40, 0, 240, 240, size_img);
+		timer_sleep (3000);
 	}
 	// Infinite loop, never return.
 }

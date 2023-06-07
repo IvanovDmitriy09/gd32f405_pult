@@ -452,7 +452,7 @@ void spi_i2s_data_frame_format_config(uint32_t spi_periph, uint16_t frame_format
 */
 void spi_i2s_data_transmit(uint32_t spi_periph, uint16_t data)
 {
-    SPI_DATA(spi_periph) = (uint32_t)data;
+    SPI_DATA(spi_periph) = (uint16_t)data;
 }
 
 /*!

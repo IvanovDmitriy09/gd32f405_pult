@@ -25,7 +25,9 @@ void ILI9341_Write_Command(uint8_t Command)
 {
 	DISP_DC_CMD;
 	DISP_CS_SELECT;
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, Command);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = Command;
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
 //	while(DISP_SPI->SR & SPI_SR_BSY);
@@ -37,7 +39,10 @@ void ILI9341_Write_Data(uint8_t Data)
 {
 	DISP_DC_DATA;
 	DISP_CS_SELECT;
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, Data);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
+
 //	DISP_SPI->DR = Data;
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
 //	while(DISP_SPI->SR & SPI_SR_BSY);
@@ -50,49 +55,71 @@ void ILI9341_Set_Address(uint16_t X1, uint16_t Y1, uint16_t X2, uint16_t Y2)
 	DISP_DC_CMD;
 	DISP_CS_SELECT;
 
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, 0x2A);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = 0x2A;
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
 //	while(DISP_SPI->SR & SPI_SR_BSY);
 
 	DISP_DC_DATA;
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, X1 >> 8);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = (uint8_t)(X1 >> 8);
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, X1);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = (uint8_t)X1;
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, X2 >> 8);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = (uint8_t)(X2 >> 8);
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, X2);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = (uint8_t)X2;
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
 //	while(DISP_SPI->SR & SPI_SR_BSY);
 
 	DISP_DC_CMD;
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, 0x2B);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = 0x2B;
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
 //	while(DISP_SPI->SR & SPI_SR_BSY);
 
 	DISP_DC_DATA;
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, Y1 >> 8);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = (uint8_t)(Y1 >> 8);
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, Y1);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = (uint8_t)Y1;
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, Y2 >> 8);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = (uint8_t)(Y2 >> 8);
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, Y2);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = (uint8_t)Y2;
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
 //	while(DISP_SPI->SR & SPI_SR_BSY);
 
 	DISP_DC_CMD;
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, 0x2C);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = 0x2C;
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
 //	while(DISP_SPI->SR & SPI_SR_BSY);
@@ -114,7 +141,10 @@ void ILI9341_Set_Rotation(uint8_t Rotation)
 {
 	DISP_DC_CMD;
 	DISP_CS_SELECT;
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, 0x36);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
+
 //	DISP_SPI->DR = 0x36;
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
 //	while(DISP_SPI->SR & SPI_SR_BSY);
@@ -124,23 +154,23 @@ void ILI9341_Set_Rotation(uint8_t Rotation)
 	{
 		case SCREEN_VERTICAL_1:
 			ILI9341_Write_Data(0x40|0x08);
-			LCD_WIDTH = 240;
-			LCD_HEIGHT = 320;
+			LCD_WIDTH = 320;
+			LCD_HEIGHT = 240;
 			break;
 		case SCREEN_HORIZONTAL_1:
 			ILI9341_Write_Data(0x20|0x08);
-			LCD_WIDTH  = 320;
-			LCD_HEIGHT = 240;
-			break;
-		case SCREEN_VERTICAL_2:
-			ILI9341_Write_Data(0x80|0x08);
 			LCD_WIDTH  = 240;
 			LCD_HEIGHT = 320;
 			break;
-		case SCREEN_HORIZONTAL_2:
-			ILI9341_Write_Data(0x40|0x80|0x20|0x08);
+		case SCREEN_VERTICAL_2:
+			ILI9341_Write_Data(0x80|0x08);
 			LCD_WIDTH  = 320;
 			LCD_HEIGHT = 240;
+			break;
+		case SCREEN_HORIZONTAL_2:
+			ILI9341_Write_Data(0x40|0x80|0x20|0x08);
+			LCD_WIDTH  = 240;
+			LCD_HEIGHT = 320;
 			break;
 		default:
 			break;
@@ -293,9 +323,11 @@ void ILI9341_Draw_Colour(uint16_t Colour)
 {
 	DISP_DC_DATA;
 	DISP_CS_SELECT;
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, Colour >> 8);
 //	DISP_SPI->DR = (Colour >> 8);
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, Colour);
 //	DISP_SPI->DR = Colour;
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
@@ -312,11 +344,15 @@ void ILI9341_Draw_Colour_Burst(uint16_t Colour, uint32_t Size)
 
 	while(Size > 0)
 	{
+		//while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 		spi_i2s_data_transmit(DISP_SPI, Colour >> 8);
+		while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //		DISP_SPI->DR = (Colour >> 8);
 //		while(!(DISP_SPI->SR & SPI_SR_TXE));
 
+		//while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 		spi_i2s_data_transmit(DISP_SPI, Colour);
+		while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //		DISP_SPI->DR = Colour;
 //		while(!(DISP_SPI->SR & SPI_SR_TXE));
 		Size--;
@@ -346,60 +382,86 @@ void ILI9341_Draw_Pixel(uint16_t X, uint16_t Y, uint16_t Colour)
 	DISP_DC_CMD;
 	DISP_CS_SELECT;
 
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, 0x2A);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = 0x2A;
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
 //	while(DISP_SPI->SR & SPI_SR_BSY);////////////
 
 	DISP_DC_DATA;
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, X >> 8);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = (X >> 8);
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, X);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = X;
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, (X + 1) >> 8);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = ((X + 1) >> 8);
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, X + 1);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = (X + 1);
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
 //	while(DISP_SPI->SR & SPI_SR_BSY);
 
 	//ADDRESS
 	DISP_DC_CMD;
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, 0x2B);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = 0x2B;
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
 //	while(DISP_SPI->SR & SPI_SR_BSY);
 
 	DISP_DC_DATA;
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, Y >> 8);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = (Y >> 8);
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, Y);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = Y;
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, (Y + 1) >> 8);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = ((Y + 1) >> 8);
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, Y + 1);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = (Y + 1);
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
 //	while(DISP_SPI->SR & SPI_SR_BSY);
 
 	//ADDRESS
 	DISP_DC_CMD;
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, 0x2C);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = 0x2C;
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
 //	while(DISP_SPI->SR & SPI_SR_BSY);
 
 	DISP_DC_DATA;
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, Colour >> 8);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = (Colour >> 8);
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
+	while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 	spi_i2s_data_transmit(DISP_SPI, Colour);
+	while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //	DISP_SPI->DR = Colour;
 //	while(!(DISP_SPI->SR & SPI_SR_TXE));
 //	while(DISP_SPI->SR & SPI_SR_BSY);
@@ -687,7 +749,9 @@ void ILI9341_Draw_Image(const char *image_array, uint16_t x_coordinat, uint16_t 
 
 	for(uint32_t i = 0; i < s_img; i++)
 	{
+		while(RESET == spi_i2s_flag_get(SPI0, SPI_FLAG_TBE));
 		spi_i2s_data_transmit(DISP_SPI, image_array[i]);
+		while(SET == spi_i2s_flag_get(SPI0, SPI_FLAG_TRANS));
 //		DISP_SPI->DR = image_array[i];
 //		while(!(DISP_SPI->SR & SPI_SR_TXE));
 	}
