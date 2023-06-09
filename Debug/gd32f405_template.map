@@ -118,12 +118,14 @@ __lock___arc4random_mutex
 dma_current_txdesc  0x4               ./System/Src/gd32f4xx/gd32f4xx_enet.o
 rx_buff             0x1dc4            ./System/Src/gd32f4xx/gd32f4xx_enet.o
 errno               0x4               ./System/Src/newlib/syscalls.o
+out_state           0x1               ./System/Src/gd32f4xx/gd32f4xx_it.o
 __lock___env_recursive_mutex
                     0x1               c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
 __lock___sinit_recursive_mutex
                     0x1               c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
 __lock___malloc_recursive_mutex
                     0x1               c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
+out_symbol          0x1               ./System/Src/gd32f4xx/gd32f4xx_it.o
 dma_current_rxdesc  0x4               ./System/Src/gd32f4xx/gd32f4xx_enet.o
 txdesc_tab          0x50              ./System/Src/gd32f4xx/gd32f4xx_enet.o
 rxdesc_tab          0x50              ./System/Src/gd32f4xx/gd32f4xx_enet.o
@@ -2535,8 +2537,6 @@ Discarded input sections
                 0x0000000000000000        0xa ./System/Src/gd32f4xx/gd32f4xx_gpio.o
  .text.gpio_port_write
                 0x0000000000000000        0x4 ./System/Src/gd32f4xx/gd32f4xx_gpio.o
- .text.gpio_input_bit_get
-                0x0000000000000000        0xe ./System/Src/gd32f4xx/gd32f4xx_gpio.o
  .text.gpio_input_port_get
                 0x0000000000000000        0x6 ./System/Src/gd32f4xx/gd32f4xx_gpio.o
  .text.gpio_output_bit_get
@@ -2979,6 +2979,81 @@ Discarded input sections
  .debug_frame   0x0000000000000000       0x88 ./System/Src/gd32f4xx/gd32f4xx_iref.o
  .ARM.attributes
                 0x0000000000000000       0x2e ./System/Src/gd32f4xx/gd32f4xx_iref.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .text          0x0000000000000000        0x0 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .data          0x0000000000000000        0x0 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .bss           0x0000000000000000        0x0 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .bss.a         0x0000000000000000        0x1 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .bss.b         0x0000000000000000        0x1 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .bss.c         0x0000000000000000        0x1 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .data.step     0x0000000000000000        0x4 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0xa8a ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000       0x70 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000       0x3b ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0x34e ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000       0x18 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000       0x26 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0xd39 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0x154 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000       0x10 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0xe9b ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0x73a ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0x8eb ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000       0x2e ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0x1ad ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0x2b0 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000       0xe8 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0x255 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0x474 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0x3af ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0x55b ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000       0xa0 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0x747 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0x1de ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0x32f ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0x2c3 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0x1bd ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0x8d5 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0x606 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0x420 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0xa3b ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000       0x4c ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000      0x44a ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000       0x5e ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x0000000000000000       0x6a ./System/Src/gd32f4xx/gd32f4xx_it.o
  .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_misc.o
  .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_misc.o
  .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_misc.o
@@ -3016,10 +3091,6 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./System/Src/gd32f4xx/gd32f4xx_misc.o
  .data          0x0000000000000000        0x0 ./System/Src/gd32f4xx/gd32f4xx_misc.o
  .bss           0x0000000000000000        0x0 ./System/Src/gd32f4xx/gd32f4xx_misc.o
- .text.nvic_priority_group_set
-                0x0000000000000000       0x14 ./System/Src/gd32f4xx/gd32f4xx_misc.o
- .text.nvic_irq_enable
-                0x0000000000000000       0xb0 ./System/Src/gd32f4xx/gd32f4xx_misc.o
  .text.nvic_irq_disable
                 0x0000000000000000       0x18 ./System/Src/gd32f4xx/gd32f4xx_misc.o
  .text.nvic_vector_table_set
@@ -3030,13 +3101,6 @@ Discarded input sections
                 0x0000000000000000       0x10 ./System/Src/gd32f4xx/gd32f4xx_misc.o
  .text.systick_clksource_set
                 0x0000000000000000       0x20 ./System/Src/gd32f4xx/gd32f4xx_misc.o
- .debug_info    0x0000000000000000      0x5bd ./System/Src/gd32f4xx/gd32f4xx_misc.o
- .debug_abbrev  0x0000000000000000      0x18f ./System/Src/gd32f4xx/gd32f4xx_misc.o
- .debug_loc     0x0000000000000000      0x2e5 ./System/Src/gd32f4xx/gd32f4xx_misc.o
- .debug_aranges
-                0x0000000000000000       0x50 ./System/Src/gd32f4xx/gd32f4xx_misc.o
- .debug_ranges  0x0000000000000000       0x40 ./System/Src/gd32f4xx/gd32f4xx_misc.o
- .debug_macro   0x0000000000000000      0x2e1 ./System/Src/gd32f4xx/gd32f4xx_misc.o
  .debug_macro   0x0000000000000000      0xa8a ./System/Src/gd32f4xx/gd32f4xx_misc.o
  .debug_macro   0x0000000000000000       0x70 ./System/Src/gd32f4xx/gd32f4xx_misc.o
  .debug_macro   0x0000000000000000       0x3b ./System/Src/gd32f4xx/gd32f4xx_misc.o
@@ -3071,12 +3135,6 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x44a ./System/Src/gd32f4xx/gd32f4xx_misc.o
  .debug_macro   0x0000000000000000       0x5e ./System/Src/gd32f4xx/gd32f4xx_misc.o
  .debug_macro   0x0000000000000000       0x6a ./System/Src/gd32f4xx/gd32f4xx_misc.o
- .debug_line    0x0000000000000000      0x507 ./System/Src/gd32f4xx/gd32f4xx_misc.o
- .debug_str     0x0000000000000000    0x29c21 ./System/Src/gd32f4xx/gd32f4xx_misc.o
- .comment       0x0000000000000000       0x69 ./System/Src/gd32f4xx/gd32f4xx_misc.o
- .debug_frame   0x0000000000000000       0x8c ./System/Src/gd32f4xx/gd32f4xx_misc.o
- .ARM.attributes
-                0x0000000000000000       0x2e ./System/Src/gd32f4xx/gd32f4xx_misc.o
  .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_pmu.o
  .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_pmu.o
  .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_pmu.o
@@ -3248,10 +3306,6 @@ Discarded input sections
                 0x0000000000000000       0x1c ./System/Src/gd32f4xx/gd32f4xx_rcu.o
  .text.rcu_periph_clock_sleep_disable
                 0x0000000000000000       0x1e ./System/Src/gd32f4xx/gd32f4xx_rcu.o
- .text.rcu_periph_reset_enable
-                0x0000000000000000       0x1c ./System/Src/gd32f4xx/gd32f4xx_rcu.o
- .text.rcu_periph_reset_disable
-                0x0000000000000000       0x1e ./System/Src/gd32f4xx/gd32f4xx_rcu.o
  .text.rcu_bkp_reset_enable
                 0x0000000000000000       0x10 ./System/Src/gd32f4xx/gd32f4xx_rcu.o
  .text.rcu_bkp_reset_disable
@@ -3286,8 +3340,6 @@ Discarded input sections
                 0x0000000000000000       0x14 ./System/Src/gd32f4xx/gd32f4xx_rcu.o
  .text.rcu_pll48m_clock_config
                 0x0000000000000000       0x14 ./System/Src/gd32f4xx/gd32f4xx_rcu.o
- .text.rcu_timer_clock_prescaler_config
-                0x0000000000000000       0x20 ./System/Src/gd32f4xx/gd32f4xx_rcu.o
  .text.rcu_tli_clock_div_config
                 0x0000000000000000       0x14 ./System/Src/gd32f4xx/gd32f4xx_rcu.o
  .text.rcu_flag_get
@@ -3991,17 +4043,9 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./System/Src/gd32f4xx/gd32f4xx_timer.o
  .data          0x0000000000000000        0x0 ./System/Src/gd32f4xx/gd32f4xx_timer.o
  .bss           0x0000000000000000        0x0 ./System/Src/gd32f4xx/gd32f4xx_timer.o
- .text.timer_deinit
-                0x0000000000000000      0x184 ./System/Src/gd32f4xx/gd32f4xx_timer.o
  .text.timer_struct_para_init
                 0x0000000000000000       0x14 ./System/Src/gd32f4xx/gd32f4xx_timer.o
- .text.timer_init
-                0x0000000000000000       0x90 ./System/Src/gd32f4xx/gd32f4xx_timer.o
- .text.timer_enable
-                0x0000000000000000        0xa ./System/Src/gd32f4xx/gd32f4xx_timer.o
  .text.timer_disable
-                0x0000000000000000        0xa ./System/Src/gd32f4xx/gd32f4xx_timer.o
- .text.timer_auto_reload_shadow_enable
                 0x0000000000000000        0xa ./System/Src/gd32f4xx/gd32f4xx_timer.o
  .text.timer_auto_reload_shadow_disable
                 0x0000000000000000        0xa ./System/Src/gd32f4xx/gd32f4xx_timer.o
@@ -4127,21 +4171,10 @@ Discarded input sections
                 0x0000000000000000        0xe ./System/Src/gd32f4xx/gd32f4xx_timer.o
  .text.timer_flag_clear
                 0x0000000000000000        0x6 ./System/Src/gd32f4xx/gd32f4xx_timer.o
- .text.timer_interrupt_enable
-                0x0000000000000000        0x8 ./System/Src/gd32f4xx/gd32f4xx_timer.o
  .text.timer_interrupt_disable
                 0x0000000000000000        0xa ./System/Src/gd32f4xx/gd32f4xx_timer.o
  .text.timer_interrupt_flag_get
                 0x0000000000000000       0x18 ./System/Src/gd32f4xx/gd32f4xx_timer.o
- .text.timer_interrupt_flag_clear
-                0x0000000000000000        0x6 ./System/Src/gd32f4xx/gd32f4xx_timer.o
- .debug_info    0x0000000000000000     0x18e5 ./System/Src/gd32f4xx/gd32f4xx_timer.o
- .debug_abbrev  0x0000000000000000      0x1ed ./System/Src/gd32f4xx/gd32f4xx_timer.o
- .debug_loc     0x0000000000000000      0xfad ./System/Src/gd32f4xx/gd32f4xx_timer.o
- .debug_aranges
-                0x0000000000000000      0x258 ./System/Src/gd32f4xx/gd32f4xx_timer.o
- .debug_ranges  0x0000000000000000      0x248 ./System/Src/gd32f4xx/gd32f4xx_timer.o
- .debug_macro   0x0000000000000000      0x2e1 ./System/Src/gd32f4xx/gd32f4xx_timer.o
  .debug_macro   0x0000000000000000      0xa8a ./System/Src/gd32f4xx/gd32f4xx_timer.o
  .debug_macro   0x0000000000000000       0x70 ./System/Src/gd32f4xx/gd32f4xx_timer.o
  .debug_macro   0x0000000000000000       0x3b ./System/Src/gd32f4xx/gd32f4xx_timer.o
@@ -4176,12 +4209,6 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x5e ./System/Src/gd32f4xx/gd32f4xx_timer.o
  .debug_macro   0x0000000000000000       0x6a ./System/Src/gd32f4xx/gd32f4xx_timer.o
  .debug_macro   0x0000000000000000      0xa3b ./System/Src/gd32f4xx/gd32f4xx_timer.o
- .debug_line    0x0000000000000000     0x1756 ./System/Src/gd32f4xx/gd32f4xx_timer.o
- .debug_str     0x0000000000000000    0x2a917 ./System/Src/gd32f4xx/gd32f4xx_timer.o
- .comment       0x0000000000000000       0x69 ./System/Src/gd32f4xx/gd32f4xx_timer.o
- .debug_frame   0x0000000000000000      0x500 ./System/Src/gd32f4xx/gd32f4xx_timer.o
- .ARM.attributes
-                0x0000000000000000       0x2e ./System/Src/gd32f4xx/gd32f4xx_timer.o
  .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_tli.o
  .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_tli.o
  .group         0x0000000000000000        0xc ./System/Src/gd32f4xx/gd32f4xx_tli.o
@@ -5329,6 +5356,7 @@ Discarded input sections
  .group         0x0000000000000000        0xc ./Src/ILI9341_GFX.o
  .group         0x0000000000000000        0xc ./Src/ILI9341_GFX.o
  .group         0x0000000000000000        0xc ./Src/ILI9341_GFX.o
+ .group         0x0000000000000000        0xc ./Src/ILI9341_GFX.o
  .text          0x0000000000000000        0x0 ./Src/ILI9341_GFX.o
  .data          0x0000000000000000        0x0 ./Src/ILI9341_GFX.o
  .bss           0x0000000000000000        0x0 ./Src/ILI9341_GFX.o
@@ -5354,6 +5382,8 @@ Discarded input sections
                 0x0000000000000000       0x4a ./Src/ILI9341_GFX.o
  .text.ILI9341_Random_line
                 0x0000000000000000       0xae ./Src/ILI9341_GFX.o
+ .text.ILI9341_Draw_Image
+                0x0000000000000000       0x74 ./Src/ILI9341_GFX.o
  .text.ILI9341_WriteString
                 0x0000000000000000       0x6e ./Src/ILI9341_GFX.o
  .bss.spi1_tx_full_flag
@@ -5469,6 +5499,7 @@ Discarded input sections
  .group         0x0000000000000000        0xc ./Src/fonts.o
  .group         0x0000000000000000        0xc ./Src/fonts.o
  .group         0x0000000000000000        0xc ./Src/fonts.o
+ .group         0x0000000000000000        0xc ./Src/fonts.o
  .text          0x0000000000000000        0x0 ./Src/fonts.o
  .data          0x0000000000000000        0x0 ./Src/fonts.o
  .bss           0x0000000000000000        0x0 ./Src/fonts.o
@@ -5488,7 +5519,7 @@ Discarded input sections
  .debug_abbrev  0x0000000000000000      0x202 ./Src/fonts.o
  .debug_aranges
                 0x0000000000000000       0x18 ./Src/fonts.o
- .debug_macro   0x0000000000000000      0x400 ./Src/fonts.o
+ .debug_macro   0x0000000000000000      0x3ff ./Src/fonts.o
  .debug_macro   0x0000000000000000      0xa8a ./Src/fonts.o
  .debug_macro   0x0000000000000000       0x18 ./Src/fonts.o
  .debug_macro   0x0000000000000000       0x22 ./Src/fonts.o
@@ -5541,9 +5572,10 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x44a ./Src/fonts.o
  .debug_macro   0x0000000000000000       0x5e ./Src/fonts.o
  .debug_macro   0x0000000000000000       0x6a ./Src/fonts.o
+ .debug_macro   0x0000000000000000       0x10 ./Src/fonts.o
  .debug_macro   0x0000000000000000       0xee ./Src/fonts.o
  .debug_line    0x0000000000000000      0x5bf ./Src/fonts.o
- .debug_str     0x0000000000000000    0x2d185 ./Src/fonts.o
+ .debug_str     0x0000000000000000    0x2d18d ./Src/fonts.o
  .comment       0x0000000000000000       0x69 ./Src/fonts.o
  .ARM.attributes
                 0x0000000000000000       0x33 ./Src/fonts.o
@@ -5615,9 +5647,14 @@ Discarded input sections
  .group         0x0000000000000000        0xc ./Src/main.o
  .group         0x0000000000000000        0xc ./Src/main.o
  .group         0x0000000000000000        0xc ./Src/main.o
+ .group         0x0000000000000000        0xc ./Src/main.o
  .text          0x0000000000000000        0x0 ./Src/main.o
  .data          0x0000000000000000        0x0 ./Src/main.o
  .bss           0x0000000000000000        0x0 ./Src/main.o
+ .rodata.img_logo
+                0x0000000000000000    0x1c200 ./Src/main.o
+ .rodata.img_logo1
+                0x0000000000000000    0x1c200 ./Src/main.o
  .debug_macro   0x0000000000000000      0xa8a ./Src/main.o
  .debug_macro   0x0000000000000000       0x22 ./Src/main.o
  .debug_macro   0x0000000000000000       0x5e ./Src/main.o
@@ -5685,6 +5722,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x44a ./Src/main.o
  .debug_macro   0x0000000000000000       0x5e ./Src/main.o
  .debug_macro   0x0000000000000000       0x6a ./Src/main.o
+ .debug_macro   0x0000000000000000       0x10 ./Src/main.o
  .debug_macro   0x0000000000000000       0xee ./Src/main.o
  .group         0x0000000000000000        0xc ./Src/systick.o
  .group         0x0000000000000000        0xc ./Src/systick.o
@@ -5918,6 +5956,7 @@ Discarded input sections
  .group         0x0000000000000000        0xc ./Src/xpt2046_touch.o
  .group         0x0000000000000000        0xc ./Src/xpt2046_touch.o
  .group         0x0000000000000000        0xc ./Src/xpt2046_touch.o
+ .group         0x0000000000000000        0xc ./Src/xpt2046_touch.o
  .text          0x0000000000000000        0x0 ./Src/xpt2046_touch.o
  .data          0x0000000000000000        0x0 ./Src/xpt2046_touch.o
  .bss           0x0000000000000000        0x0 ./Src/xpt2046_touch.o
@@ -5925,7 +5964,7 @@ Discarded input sections
  .debug_abbrev  0x0000000000000000      0x1bb ./Src/xpt2046_touch.o
  .debug_aranges
                 0x0000000000000000       0x18 ./Src/xpt2046_touch.o
- .debug_macro   0x0000000000000000      0x431 ./Src/xpt2046_touch.o
+ .debug_macro   0x0000000000000000      0x430 ./Src/xpt2046_touch.o
  .debug_macro   0x0000000000000000      0xa8a ./Src/xpt2046_touch.o
  .debug_macro   0x0000000000000000       0x18 ./Src/xpt2046_touch.o
  .debug_macro   0x0000000000000000       0x22 ./Src/xpt2046_touch.o
@@ -5978,10 +6017,11 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x44a ./Src/xpt2046_touch.o
  .debug_macro   0x0000000000000000       0x5e ./Src/xpt2046_touch.o
  .debug_macro   0x0000000000000000       0x6a ./Src/xpt2046_touch.o
+ .debug_macro   0x0000000000000000       0x10 ./Src/xpt2046_touch.o
  .debug_macro   0x0000000000000000       0xee ./Src/xpt2046_touch.o
  .debug_macro   0x0000000000000000       0x16 ./Src/xpt2046_touch.o
  .debug_line    0x0000000000000000      0x5da ./Src/xpt2046_touch.o
- .debug_str     0x0000000000000000    0x2d24b ./Src/xpt2046_touch.o
+ .debug_str     0x0000000000000000    0x2d253 ./Src/xpt2046_touch.o
  .comment       0x0000000000000000       0x69 ./Src/xpt2046_touch.o
  .ARM.attributes
                 0x0000000000000000       0x33 ./Src/xpt2046_touch.o
@@ -6466,6 +6506,7 @@ LOAD ./System/Src/gd32f4xx/gd32f4xx_gpio.o
 LOAD ./System/Src/gd32f4xx/gd32f4xx_i2c.o
 LOAD ./System/Src/gd32f4xx/gd32f4xx_ipa.o
 LOAD ./System/Src/gd32f4xx/gd32f4xx_iref.o
+LOAD ./System/Src/gd32f4xx/gd32f4xx_it.o
 LOAD ./System/Src/gd32f4xx/gd32f4xx_misc.o
 LOAD ./System/Src/gd32f4xx/gd32f4xx_pmu.o
 LOAD ./System/Src/gd32f4xx/gd32f4xx_rcu.o
@@ -6510,7 +6551,7 @@ END GROUP
                 0x000000002001fc00                __Main_Stack_Limit = (__stack - __Main_Stack_Size)
                 [!provide]                        PROVIDE (_Main_Stack_Limit = __Main_Stack_Limit)
                 0x0000000000000100                _Minimum_Stack_Size = 0x100
-                0x0000000020000298                PROVIDE (_Heap_Begin = _end_noinit)
+                0x000000002000029c                PROVIDE (_Heap_Begin = _end_noinit)
                 0x000000002001fc00                PROVIDE (_Heap_Limit = (__stack - __Main_Stack_Size))
 
 .isr_vector     0x0000000008000000      0x3ca
@@ -6528,17 +6569,9 @@ END GROUP
  .after_vectors
                 0x000000000800029c      0x12c ./System/Src/cortexm/exception-handlers.o
                 0x000000000800029c                Reset_Handler
-                0x00000000080002a2                NMI_Handler
-                0x00000000080002a6                HardFault_Handler
                 0x00000000080002ba                HardFault_Handler_C
-                0x0000000008000318                MemManage_Handler
-                0x000000000800031c                BusFault_Handler
                 0x0000000008000330                BusFault_Handler_C
-                0x0000000008000364                UsageFault_Handler
                 0x0000000008000378                UsageFault_Handler_C
-                0x00000000080003ac                SVC_Handler
-                0x00000000080003b0                DebugMon_Handler
-                0x00000000080003b4                PendSV_Handler
  .after_vectors
                 0x00000000080003c8        0x2 ./System/Src/CMSIS/vectors_gd32f4xx.o
                 0x00000000080003c8                RTC_Alarm_IRQHandler
@@ -6546,7 +6579,6 @@ END GROUP
                 0x00000000080003c8                TIMER2_IRQHandler
                 0x00000000080003c8                LVD_IRQHandler
                 0x00000000080003c8                CAN1_EWMC_IRQHandler
-                0x00000000080003c8                TIMER7_UP_TIMER12_IRQHandler
                 0x00000000080003c8                SDIO_IRQHandler
                 0x00000000080003c8                EXTI3_IRQHandler
                 0x00000000080003c8                DCI_IRQHandler
@@ -6623,16 +6655,16 @@ END GROUP
 
 .inits          0x00000000080003cc       0x28
                 0x00000000080003cc                __data_regions_array_start = .
-                0x00000000080003cc        0x4 LONG 0x803df68 LOADADDR (.data)
+                0x00000000080003cc        0x4 LONG 0x8006098 LOADADDR (.data)
                 0x00000000080003d0        0x4 LONG 0x20000000 ADDR (.data)
                 0x00000000080003d4        0x4 LONG 0x200001ec (ADDR (.data) + SIZEOF (.data))
-                0x00000000080003d8        0x4 LONG 0x803df68 LOADADDR (.data_CCMRAM)
+                0x00000000080003d8        0x4 LONG 0x8006098 LOADADDR (.data_CCMRAM)
                 0x00000000080003dc        0x4 LONG 0x10000000 ADDR (.data_CCMRAM)
                 0x00000000080003e0        0x4 LONG 0x10000000 (ADDR (.data_CCMRAM) + SIZEOF (.data_CCMRAM))
                 0x00000000080003e4                __data_regions_array_end = .
                 0x00000000080003e4                __bss_regions_array_start = .
                 0x00000000080003e4        0x4 LONG 0x200001ec ADDR (.bss)
-                0x00000000080003e8        0x4 LONG 0x20000298 (ADDR (.bss) + SIZEOF (.bss))
+                0x00000000080003e8        0x4 LONG 0x2000029c (ADDR (.bss) + SIZEOF (.bss))
                 0x00000000080003ec        0x4 LONG 0x10000000 ADDR (.bss_CCMRAM)
                 0x00000000080003f0        0x4 LONG 0x10000000 (ADDR (.bss_CCMRAM) + SIZEOF (.bss_CCMRAM))
                 0x00000000080003f4                __bss_regions_array_end = .
@@ -6658,7 +6690,7 @@ END GROUP
 .flashtext
  *(.flashtext .flashtext.*)
 
-.text           0x0000000008000400    0x3db65
+.text           0x0000000008000400     0x5c95
  *(.text .text.*)
  .text._exit    0x0000000008000400        0x2 ./System/Src/newlib/exit.o
                 0x0000000008000400                _exit
@@ -6680,432 +6712,499 @@ END GROUP
  .text.gpio_bit_reset
                 0x00000000080004e6        0x4 ./System/Src/gd32f4xx/gd32f4xx_gpio.o
                 0x00000000080004e6                gpio_bit_reset
+ .text.gpio_input_bit_get
+                0x00000000080004ea        0xe ./System/Src/gd32f4xx/gd32f4xx_gpio.o
+                0x00000000080004ea                gpio_input_bit_get
  .text.gpio_af_set
-                0x00000000080004ea       0x60 ./System/Src/gd32f4xx/gd32f4xx_gpio.o
-                0x00000000080004ea                gpio_af_set
+                0x00000000080004f8       0x60 ./System/Src/gd32f4xx/gd32f4xx_gpio.o
+                0x00000000080004f8                gpio_af_set
+ .text.NMI_Handler
+                0x0000000008000558        0x2 ./System/Src/gd32f4xx/gd32f4xx_it.o
+                0x0000000008000558                NMI_Handler
+ .text.HardFault_Handler
+                0x000000000800055a        0x2 ./System/Src/gd32f4xx/gd32f4xx_it.o
+                0x000000000800055a                HardFault_Handler
+ .text.MemManage_Handler
+                0x000000000800055c        0x2 ./System/Src/gd32f4xx/gd32f4xx_it.o
+                0x000000000800055c                MemManage_Handler
+ .text.BusFault_Handler
+                0x000000000800055e        0x2 ./System/Src/gd32f4xx/gd32f4xx_it.o
+                0x000000000800055e                BusFault_Handler
+ .text.UsageFault_Handler
+                0x0000000008000560        0x2 ./System/Src/gd32f4xx/gd32f4xx_it.o
+                0x0000000008000560                UsageFault_Handler
+ .text.SVC_Handler
+                0x0000000008000562        0x2 ./System/Src/gd32f4xx/gd32f4xx_it.o
+                0x0000000008000562                SVC_Handler
+ .text.DebugMon_Handler
+                0x0000000008000564        0x2 ./System/Src/gd32f4xx/gd32f4xx_it.o
+                0x0000000008000564                DebugMon_Handler
+ .text.PendSV_Handler
+                0x0000000008000566        0x2 ./System/Src/gd32f4xx/gd32f4xx_it.o
+                0x0000000008000566                PendSV_Handler
+ .text.turn_on_line
+                0x0000000008000568       0xfc ./System/Src/gd32f4xx/gd32f4xx_it.o
+                0x0000000008000568                turn_on_line
+ .text.TIMER7_UP_TIMER12_IRQHandler
+                0x0000000008000664       0x30 ./System/Src/gd32f4xx/gd32f4xx_it.o
+                0x0000000008000664                TIMER7_UP_TIMER12_IRQHandler
+ .text.nvic_priority_group_set
+                0x0000000008000694       0x14 ./System/Src/gd32f4xx/gd32f4xx_misc.o
+                0x0000000008000694                nvic_priority_group_set
+ .text.nvic_irq_enable
+                0x00000000080006a8       0xb0 ./System/Src/gd32f4xx/gd32f4xx_misc.o
+                0x00000000080006a8                nvic_irq_enable
  .text.rcu_periph_clock_enable
-                0x000000000800054a       0x1c ./System/Src/gd32f4xx/gd32f4xx_rcu.o
-                0x000000000800054a                rcu_periph_clock_enable
+                0x0000000008000758       0x1c ./System/Src/gd32f4xx/gd32f4xx_rcu.o
+                0x0000000008000758                rcu_periph_clock_enable
+ .text.rcu_periph_reset_enable
+                0x0000000008000774       0x1c ./System/Src/gd32f4xx/gd32f4xx_rcu.o
+                0x0000000008000774                rcu_periph_reset_enable
+ .text.rcu_periph_reset_disable
+                0x0000000008000790       0x1e ./System/Src/gd32f4xx/gd32f4xx_rcu.o
+                0x0000000008000790                rcu_periph_reset_disable
+ *fill*         0x00000000080007ae        0x2 
+ .text.rcu_timer_clock_prescaler_config
+                0x00000000080007b0       0x20 ./System/Src/gd32f4xx/gd32f4xx_rcu.o
+                0x00000000080007b0                rcu_timer_clock_prescaler_config
  .text.spi_init
-                0x0000000008000566       0x2e ./System/Src/gd32f4xx/gd32f4xx_spi.o
-                0x0000000008000566                spi_init
+                0x00000000080007d0       0x2e ./System/Src/gd32f4xx/gd32f4xx_spi.o
+                0x00000000080007d0                spi_init
  .text.spi_enable
-                0x0000000008000594        0xa ./System/Src/gd32f4xx/gd32f4xx_spi.o
-                0x0000000008000594                spi_enable
+                0x00000000080007fe        0xa ./System/Src/gd32f4xx/gd32f4xx_spi.o
+                0x00000000080007fe                spi_enable
  .text.spi_i2s_data_transmit
-                0x000000000800059e        0x4 ./System/Src/gd32f4xx/gd32f4xx_spi.o
-                0x000000000800059e                spi_i2s_data_transmit
+                0x0000000008000808        0x4 ./System/Src/gd32f4xx/gd32f4xx_spi.o
+                0x0000000008000808                spi_i2s_data_transmit
  .text.spi_i2s_flag_get
-                0x00000000080005a2        0xe ./System/Src/gd32f4xx/gd32f4xx_spi.o
-                0x00000000080005a2                spi_i2s_flag_get
+                0x000000000800080c        0xe ./System/Src/gd32f4xx/gd32f4xx_spi.o
+                0x000000000800080c                spi_i2s_flag_get
+ *fill*         0x000000000800081a        0x2 
+ .text.timer_deinit
+                0x000000000800081c      0x184 ./System/Src/gd32f4xx/gd32f4xx_timer.o
+                0x000000000800081c                timer_deinit
+ .text.timer_init
+                0x00000000080009a0       0x90 ./System/Src/gd32f4xx/gd32f4xx_timer.o
+                0x00000000080009a0                timer_init
+ .text.timer_enable
+                0x0000000008000a30        0xa ./System/Src/gd32f4xx/gd32f4xx_timer.o
+                0x0000000008000a30                timer_enable
+ .text.timer_auto_reload_shadow_enable
+                0x0000000008000a3a        0xa ./System/Src/gd32f4xx/gd32f4xx_timer.o
+                0x0000000008000a3a                timer_auto_reload_shadow_enable
+ .text.timer_interrupt_enable
+                0x0000000008000a44        0x8 ./System/Src/gd32f4xx/gd32f4xx_timer.o
+                0x0000000008000a44                timer_interrupt_enable
+ .text.timer_interrupt_flag_clear
+                0x0000000008000a4c        0x6 ./System/Src/gd32f4xx/gd32f4xx_timer.o
+                0x0000000008000a4c                timer_interrupt_flag_clear
  .text._trace_write_semihosting_debug
-                0x00000000080005b0       0x60 ./System/Src/diag/trace-impl.o
+                0x0000000008000a52       0x60 ./System/Src/diag/trace-impl.o
  .text.trace_write
-                0x0000000008000610        0x8 ./System/Src/diag/trace-impl.o
-                0x0000000008000610                trace_write
+                0x0000000008000ab2        0x8 ./System/Src/diag/trace-impl.o
+                0x0000000008000ab2                trace_write
+ *fill*         0x0000000008000aba        0x2 
  .text.trace_printf
-                0x0000000008000618       0x34 ./System/Src/diag/trace.o
-                0x0000000008000618                trace_printf
+                0x0000000008000abc       0x34 ./System/Src/diag/trace.o
+                0x0000000008000abc                trace_printf
  .text.dumpExceptionStack
-                0x000000000800064c       0xf4 ./System/Src/cortexm/exception-handlers.o
-                0x000000000800064c                dumpExceptionStack
+                0x0000000008000af0       0xf4 ./System/Src/cortexm/exception-handlers.o
+                0x0000000008000af0                dumpExceptionStack
  .text.isSemihosting
-                0x0000000008000740       0x20 ./System/Src/cortexm/exception-handlers.o
-                0x0000000008000740                isSemihosting
+                0x0000000008000be4       0x20 ./System/Src/cortexm/exception-handlers.o
+                0x0000000008000be4                isSemihosting
  .text.__initialize_hardware_early
-                0x0000000008000760       0x18 ./System/Src/cortexm/initialize-hardware.o
-                0x0000000008000760                __initialize_hardware_early
+                0x0000000008000c04       0x18 ./System/Src/cortexm/initialize-hardware.o
+                0x0000000008000c04                __initialize_hardware_early
  .text.__initialize_hardware
-                0x0000000008000778        0x8 ./System/Src/cortexm/initialize-hardware.o
-                0x0000000008000778                __initialize_hardware
+                0x0000000008000c1c        0x8 ./System/Src/cortexm/initialize-hardware.o
+                0x0000000008000c1c                __initialize_hardware
  .text.system_clock_168m_8m_hxtal
-                0x0000000008000780       0xd4 ./System/Src/CMSIS/system_gd32f4xx.o
+                0x0000000008000c24       0xd4 ./System/Src/CMSIS/system_gd32f4xx.o
  .text.system_clock_config
-                0x0000000008000854        0x8 ./System/Src/CMSIS/system_gd32f4xx.o
+                0x0000000008000cf8        0x8 ./System/Src/CMSIS/system_gd32f4xx.o
  .text.SystemInit
-                0x000000000800085c       0x98 ./System/Src/CMSIS/system_gd32f4xx.o
-                0x000000000800085c                SystemInit
+                0x0000000008000d00       0x98 ./System/Src/CMSIS/system_gd32f4xx.o
+                0x0000000008000d00                SystemInit
  .text.SystemCoreClockUpdate
-                0x00000000080008f4       0xa4 ./System/Src/CMSIS/system_gd32f4xx.o
-                0x00000000080008f4                SystemCoreClockUpdate
+                0x0000000008000d98       0xa4 ./System/Src/CMSIS/system_gd32f4xx.o
+                0x0000000008000d98                SystemCoreClockUpdate
  .text.ILI9341_Write_Command
-                0x0000000008000998       0x4c ./Src/ILI9341_GFX.o
-                0x0000000008000998                ILI9341_Write_Command
+                0x0000000008000e3c       0x4c ./Src/ILI9341_GFX.o
+                0x0000000008000e3c                ILI9341_Write_Command
  .text.ILI9341_Write_Data
-                0x00000000080009e4       0x4c ./Src/ILI9341_GFX.o
-                0x00000000080009e4                ILI9341_Write_Data
+                0x0000000008000e88       0x4c ./Src/ILI9341_GFX.o
+                0x0000000008000e88                ILI9341_Write_Data
  .text.ILI9341_Set_Address
-                0x0000000008000a30      0x1b0 ./Src/ILI9341_GFX.o
-                0x0000000008000a30                ILI9341_Set_Address
+                0x0000000008000ed4      0x1b0 ./Src/ILI9341_GFX.o
+                0x0000000008000ed4                ILI9341_Set_Address
  .text.ILI9341_Reset
-                0x0000000008000be0       0x34 ./Src/ILI9341_GFX.o
-                0x0000000008000be0                ILI9341_Reset
+                0x0000000008001084       0x34 ./Src/ILI9341_GFX.o
+                0x0000000008001084                ILI9341_Reset
  .text.ILI9341_Set_Rotation
-                0x0000000008000c14       0xb4 ./Src/ILI9341_GFX.o
-                0x0000000008000c14                ILI9341_Set_Rotation
+                0x00000000080010b8       0xb4 ./Src/ILI9341_GFX.o
+                0x00000000080010b8                ILI9341_Set_Rotation
  .text.ILI9341_Init
-                0x0000000008000cc8      0x21c ./Src/ILI9341_GFX.o
-                0x0000000008000cc8                ILI9341_Init
+                0x000000000800116c      0x21c ./Src/ILI9341_GFX.o
+                0x000000000800116c                ILI9341_Init
  .text.ILI9341_Draw_Colour_Burst
-                0x0000000008000ee4       0x5c ./Src/ILI9341_GFX.o
-                0x0000000008000ee4                ILI9341_Draw_Colour_Burst
+                0x0000000008001388       0x5c ./Src/ILI9341_GFX.o
+                0x0000000008001388                ILI9341_Draw_Colour_Burst
  .text.ILI9341_Fill_Screen
-                0x0000000008000f40       0x2c ./Src/ILI9341_GFX.o
-                0x0000000008000f40                ILI9341_Fill_Screen
- .text.ILI9341_Draw_Image
-                0x0000000008000f6c       0x74 ./Src/ILI9341_GFX.o
-                0x0000000008000f6c                ILI9341_Draw_Image
+                0x00000000080013e4       0x2c ./Src/ILI9341_GFX.o
+                0x00000000080013e4                ILI9341_Fill_Screen
+ .text.nvic_config
+                0x0000000008001410       0x16 ./Src/main.o
+                0x0000000008001410                nvic_config
  .text.rcu_config
-                0x0000000008000fe0       0x24 ./Src/main.o
-                0x0000000008000fe0                rcu_config
+                0x0000000008001426       0x3c ./Src/main.o
+                0x0000000008001426                rcu_config
+ *fill*         0x0000000008001462        0x2 
  .text.gpio_config
-                0x0000000008001004       0x7c ./Src/main.o
-                0x0000000008001004                gpio_config
+                0x0000000008001464       0x9c ./Src/main.o
+                0x0000000008001464                gpio_config
  .text.spi_config
-                0x0000000008001080       0x30 ./Src/main.o
-                0x0000000008001080                spi_config
- .text.main     0x00000000080010b0       0x88 ./Src/main.o
-                0x00000000080010b0                main
+                0x0000000008001500       0x30 ./Src/main.o
+                0x0000000008001500                spi_config
+ .text.timer_config
+                0x0000000008001530       0x64 ./Src/main.o
+                0x0000000008001530                timer_config
+ .text.main     0x0000000008001594       0xdc ./Src/main.o
+                0x0000000008001594                main
  .text.timer_start
-                0x0000000008001138       0x3c ./Src/timer.o
-                0x0000000008001138                timer_start
+                0x0000000008001670       0x3c ./Src/timer.o
+                0x0000000008001670                timer_start
  .text.timer_sleep
-                0x0000000008001174       0x14 ./Src/timer.o
-                0x0000000008001174                timer_sleep
+                0x00000000080016ac       0x14 ./Src/timer.o
+                0x00000000080016ac                timer_sleep
  .text.timer_tick
-                0x0000000008001188       0x14 ./Src/timer.o
-                0x0000000008001188                timer_tick
+                0x00000000080016c0       0x14 ./Src/timer.o
+                0x00000000080016c0                timer_tick
  .text.SysTick_Handler
-                0x000000000800119c        0x8 ./Src/timer.o
-                0x000000000800119c                SysTick_Handler
- .text.__errno  0x00000000080011a4        0xc c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-errno.o)
-                0x00000000080011a4                __errno
- .text.memcpy   0x00000000080011b0       0x1c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
-                0x00000000080011b0                memcpy
- .text.__cvt    0x00000000080011cc       0xbc c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_float.o)
-                0x00000000080011cc                __cvt
+                0x00000000080016d4        0x8 ./Src/timer.o
+                0x00000000080016d4                SysTick_Handler
+ .text.__errno  0x00000000080016dc        0xc c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-errno.o)
+                0x00000000080016dc                __errno
+ .text.memcpy   0x00000000080016e8       0x1c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
+                0x00000000080016e8                memcpy
+ .text.__cvt    0x0000000008001704       0xbc c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_float.o)
+                0x0000000008001704                __cvt
  .text.__exponent
-                0x0000000008001288       0x64 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_float.o)
-                0x0000000008001288                __exponent
+                0x00000000080017c0       0x64 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_float.o)
+                0x00000000080017c0                __exponent
  .text._printf_float
-                0x00000000080012ec      0x444 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_float.o)
-                0x00000000080012ec                _printf_float
+                0x0000000008001824      0x444 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_float.o)
+                0x0000000008001824                _printf_float
  .text._printf_common
-                0x0000000008001730       0xea c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x0000000008001730                _printf_common
- *fill*         0x000000000800181a        0x2 
+                0x0000000008001c68       0xea c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000008001c68                _printf_common
+ *fill*         0x0000000008001d52        0x2 
  .text._printf_i
-                0x000000000800181c      0x228 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
-                0x000000000800181c                _printf_i
+                0x0000000008001d54      0x228 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000008001d54                _printf_i
  .text._scanf_float
-                0x0000000008001a44      0x3c0 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfscanf_float.o)
-                0x0000000008001a44                _scanf_float
- .text.nanf     0x0000000008001e04        0x8 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sf_nan.o)
-                0x0000000008001e04                nanf
- .text.sprintf  0x0000000008001e0c       0x40 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sprintf.o)
-                0x0000000008001e0c                siprintf
-                0x0000000008001e0c                sprintf
- .text          0x0000000008001e4c       0x10 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strlen.o)
-                0x0000000008001e4c                strlen
- .text.sulp     0x0000000008001e5c       0x42 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtod.o)
- *fill*         0x0000000008001e9e        0x2 
+                0x0000000008001f7c      0x3c0 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfscanf_float.o)
+                0x0000000008001f7c                _scanf_float
+ .text.nanf     0x000000000800233c        0x8 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sf_nan.o)
+                0x000000000800233c                nanf
+ .text.sprintf  0x0000000008002344       0x40 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sprintf.o)
+                0x0000000008002344                siprintf
+                0x0000000008002344                sprintf
+ .text          0x0000000008002384       0x10 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strlen.o)
+                0x0000000008002384                strlen
+ .text.sulp     0x0000000008002394       0x42 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtod.o)
+ *fill*         0x00000000080023d6        0x2 
  .text._strtod_l
-                0x0000000008001ea0      0xbf0 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtod.o)
-                0x0000000008001ea0                _strtod_l
+                0x00000000080023d8      0xbf0 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtod.o)
+                0x00000000080023d8                _strtod_l
  .text._strtod_r
-                0x0000000008002a90        0xc c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtod.o)
-                0x0000000008002a90                _strtod_r
+                0x0000000008002fc8        0xc c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtod.o)
+                0x0000000008002fc8                _strtod_r
  .text._strtol_l.isra.0
-                0x0000000008002a9c       0xf0 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtol.o)
+                0x0000000008002fd4       0xf0 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtol.o)
  .text._strtol_r
-                0x0000000008002b8c        0x4 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtol.o)
-                0x0000000008002b8c                _strtol_r
+                0x00000000080030c4        0x4 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtol.o)
+                0x00000000080030c4                _strtol_r
  .text._vsnprintf_r
-                0x0000000008002b90       0x58 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-vsnprintf.o)
-                0x0000000008002b90                _vsniprintf_r
-                0x0000000008002b90                _vsnprintf_r
+                0x00000000080030c8       0x58 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-vsnprintf.o)
+                0x00000000080030c8                _vsniprintf_r
+                0x00000000080030c8                _vsnprintf_r
  .text.vsnprintf
-                0x0000000008002be8       0x1c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-vsnprintf.o)
-                0x0000000008002be8                vsniprintf
-                0x0000000008002be8                vsnprintf
- .text.quorem   0x0000000008002c04      0x112 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-dtoa.o)
- *fill*         0x0000000008002d16        0x2 
- .text._dtoa_r  0x0000000008002d18      0xb5c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-dtoa.o)
-                0x0000000008002d18                _dtoa_r
- .text.rshift   0x0000000008003874       0x74 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gdtoa-gethex.o)
+                0x0000000008003120       0x1c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-vsnprintf.o)
+                0x0000000008003120                vsniprintf
+                0x0000000008003120                vsnprintf
+ .text.quorem   0x000000000800313c      0x112 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-dtoa.o)
+ *fill*         0x000000000800324e        0x2 
+ .text._dtoa_r  0x0000000008003250      0xb5c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-dtoa.o)
+                0x0000000008003250                _dtoa_r
+ .text.rshift   0x0000000008003dac       0x74 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gdtoa-gethex.o)
  .text.__hexdig_fun
-                0x00000000080038e8       0x2a c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gdtoa-gethex.o)
-                0x00000000080038e8                __hexdig_fun
- *fill*         0x0000000008003912        0x2 
+                0x0000000008003e20       0x2a c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gdtoa-gethex.o)
+                0x0000000008003e20                __hexdig_fun
+ *fill*         0x0000000008003e4a        0x2 
  .text.__gethex
-                0x0000000008003914      0x448 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gdtoa-gethex.o)
-                0x0000000008003914                __gethex
- .text.L_shift  0x0000000008003d5c       0x24 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gdtoa-hexnan.o)
- .text.__match  0x0000000008003d80       0x28 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gdtoa-hexnan.o)
-                0x0000000008003d80                __match
+                0x0000000008003e4c      0x448 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gdtoa-gethex.o)
+                0x0000000008003e4c                __gethex
+ .text.L_shift  0x0000000008004294       0x24 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gdtoa-hexnan.o)
+ .text.__match  0x00000000080042b8       0x28 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gdtoa-hexnan.o)
+                0x00000000080042b8                __match
  .text.__hexnan
-                0x0000000008003da8      0x120 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gdtoa-hexnan.o)
-                0x0000000008003da8                __hexnan
+                0x00000000080042e0      0x120 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gdtoa-hexnan.o)
+                0x00000000080042e0                __hexnan
  .text._localeconv_r
-                0x0000000008003ec8        0x8 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-localeconv.o)
-                0x0000000008003ec8                _localeconv_r
- .text.malloc   0x0000000008003ed0       0x10 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-malloc.o)
-                0x0000000008003ed0                malloc
+                0x0000000008004400        0x8 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-localeconv.o)
+                0x0000000008004400                _localeconv_r
+ .text.malloc   0x0000000008004408       0x10 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-malloc.o)
+                0x0000000008004408                malloc
  .text.__ascii_mbtowc
-                0x0000000008003ee0       0x24 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mbtowc_r.o)
-                0x0000000008003ee0                __ascii_mbtowc
- *fill*         0x0000000008003f04        0xc 
- .text          0x0000000008003f10       0xa0 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memchr.o)
-                0x0000000008003f10                memchr
- .text._Balloc  0x0000000008003fb0       0x68 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
-                0x0000000008003fb0                _Balloc
- .text._Bfree   0x0000000008004018       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
-                0x0000000008004018                _Bfree
+                0x0000000008004418       0x24 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mbtowc_r.o)
+                0x0000000008004418                __ascii_mbtowc
+ *fill*         0x000000000800443c        0x4 
+ .text          0x0000000008004440       0xa0 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memchr.o)
+                0x0000000008004440                memchr
+ .text._Balloc  0x00000000080044e0       0x68 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x00000000080044e0                _Balloc
+ .text._Bfree   0x0000000008004548       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x0000000008004548                _Bfree
  .text.__multadd
-                0x0000000008004046       0x76 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
-                0x0000000008004046                __multadd
- .text.__s2b    0x00000000080040bc       0x7c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
-                0x00000000080040bc                __s2b
+                0x0000000008004576       0x76 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x0000000008004576                __multadd
+ .text.__s2b    0x00000000080045ec       0x7c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x00000000080045ec                __s2b
  .text.__hi0bits
-                0x0000000008004138       0x40 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
-                0x0000000008004138                __hi0bits
+                0x0000000008004668       0x40 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x0000000008004668                __hi0bits
  .text.__lo0bits
-                0x0000000008004178       0x60 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
-                0x0000000008004178                __lo0bits
- .text.__i2b    0x00000000080041d8       0x12 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
-                0x00000000080041d8                __i2b
+                0x00000000080046a8       0x60 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x00000000080046a8                __lo0bits
+ .text.__i2b    0x0000000008004708       0x12 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x0000000008004708                __i2b
  .text.__multiply
-                0x00000000080041ea      0x120 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
-                0x00000000080041ea                __multiply
- *fill*         0x000000000800430a        0x2 
+                0x000000000800471a      0x120 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x000000000800471a                __multiply
+ *fill*         0x000000000800483a        0x2 
  .text.__pow5mult
-                0x000000000800430c       0x9c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
-                0x000000000800430c                __pow5mult
+                0x000000000800483c       0x9c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x000000000800483c                __pow5mult
  .text.__lshift
-                0x00000000080043a8       0xa6 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
-                0x00000000080043a8                __lshift
- .text.__mcmp   0x000000000800444e       0x34 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
-                0x000000000800444e                __mcmp
- .text.__mdiff  0x0000000008004482       0xba c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
-                0x0000000008004482                __mdiff
- .text.__ulp    0x000000000800453c       0x44 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
-                0x000000000800453c                __ulp
- .text.__b2d    0x0000000008004580       0xa8 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
-                0x0000000008004580                __b2d
- .text.__d2b    0x0000000008004628       0x9c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
-                0x0000000008004628                __d2b
- .text.__ratio  0x00000000080046c4       0x5c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
-                0x00000000080046c4                __ratio
+                0x00000000080048d8       0xa6 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x00000000080048d8                __lshift
+ .text.__mcmp   0x000000000800497e       0x34 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x000000000800497e                __mcmp
+ .text.__mdiff  0x00000000080049b2       0xba c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x00000000080049b2                __mdiff
+ .text.__ulp    0x0000000008004a6c       0x44 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x0000000008004a6c                __ulp
+ .text.__b2d    0x0000000008004ab0       0xa8 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x0000000008004ab0                __b2d
+ .text.__d2b    0x0000000008004b58       0x9c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x0000000008004b58                __d2b
+ .text.__ratio  0x0000000008004bf4       0x5c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x0000000008004bf4                __ratio
  .text.__copybits
-                0x0000000008004720       0x34 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
-                0x0000000008004720                __copybits
+                0x0000000008004c50       0x34 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x0000000008004c50                __copybits
  .text.__any_on
-                0x0000000008004754       0x42 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
-                0x0000000008004754                __any_on
+                0x0000000008004c84       0x42 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x0000000008004c84                __any_on
  .text._calloc_r
-                0x0000000008004796       0x1c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-callocr.o)
-                0x0000000008004796                _calloc_r
- *fill*         0x00000000080047b2        0x2 
- .text._free_r  0x00000000080047b4       0x9c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-freer.o)
-                0x00000000080047b4                _free_r
+                0x0000000008004cc6       0x1c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-callocr.o)
+                0x0000000008004cc6                _calloc_r
+ *fill*         0x0000000008004ce2        0x2 
+ .text._free_r  0x0000000008004ce4       0x9c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-freer.o)
+                0x0000000008004ce4                _free_r
  .text._malloc_r
-                0x0000000008004850       0xb4 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
-                0x0000000008004850                _malloc_r
+                0x0000000008004d80       0xb4 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
+                0x0000000008004d80                _malloc_r
  .text.__ssputs_r
-                0x0000000008004904       0xb6 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
-                0x0000000008004904                __ssputs_r
- *fill*         0x00000000080049ba        0x2 
+                0x0000000008004e34       0xb6 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x0000000008004e34                __ssputs_r
+ *fill*         0x0000000008004eea        0x2 
  .text._svfprintf_r
-                0x00000000080049bc      0x1f0 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
-                0x00000000080049bc                _svfiprintf_r
-                0x00000000080049bc                _svfprintf_r
- .text.nan      0x0000000008004bac        0xc c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-s_nan.o)
-                0x0000000008004bac                nan
- .text._sbrk_r  0x0000000008004bb8       0x20 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sbrkr.o)
-                0x0000000008004bb8                _sbrk_r
- .text.strncmp  0x0000000008004bd8       0x24 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strncmp.o)
-                0x0000000008004bd8                strncmp
+                0x0000000008004eec      0x1f0 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x0000000008004eec                _svfiprintf_r
+                0x0000000008004eec                _svfprintf_r
+ .text.nan      0x00000000080050dc        0xc c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-s_nan.o)
+                0x00000000080050dc                nan
+ .text._sbrk_r  0x00000000080050e8       0x20 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sbrkr.o)
+                0x00000000080050e8                _sbrk_r
+ .text.strncmp  0x0000000008005108       0x24 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strncmp.o)
+                0x0000000008005108                strncmp
  .text.__ascii_wctomb
-                0x0000000008004bfc       0x1a c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-wctomb_r.o)
-                0x0000000008004bfc                __ascii_wctomb
- .text.memmove  0x0000000008004c16       0x34 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memmove.o)
-                0x0000000008004c16                memmove
- .text.memset   0x0000000008004c4a       0x10 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memset.o)
-                0x0000000008004c4a                memset
- *fill*         0x0000000008004c5a        0x2 
+                0x000000000800512c       0x1a c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-wctomb_r.o)
+                0x000000000800512c                __ascii_wctomb
+ .text.memmove  0x0000000008005146       0x34 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memmove.o)
+                0x0000000008005146                memmove
+ .text.memset   0x000000000800517a       0x10 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memset.o)
+                0x000000000800517a                memset
+ *fill*         0x000000000800518a        0x2 
  .text.__malloc_lock
-                0x0000000008004c5c        0xc c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mlock.o)
-                0x0000000008004c5c                __malloc_lock
+                0x000000000800518c        0xc c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mlock.o)
+                0x000000000800518c                __malloc_lock
  .text.__malloc_unlock
-                0x0000000008004c68        0xc c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mlock.o)
-                0x0000000008004c68                __malloc_unlock
+                0x0000000008005198        0xc c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mlock.o)
+                0x0000000008005198                __malloc_unlock
  .text._realloc_r
-                0x0000000008004c74       0x4c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-reallocr.o)
-                0x0000000008004c74                _realloc_r
+                0x00000000080051a4       0x4c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-reallocr.o)
+                0x00000000080051a4                _realloc_r
  .text.__retarget_lock_acquire_recursive
-                0x0000000008004cc0        0x2 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
-                0x0000000008004cc0                __retarget_lock_acquire_recursive
+                0x00000000080051f0        0x2 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
+                0x00000000080051f0                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x0000000008004cc2        0x2 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
-                0x0000000008004cc2                __retarget_lock_release_recursive
+                0x00000000080051f2        0x2 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
+                0x00000000080051f2                __retarget_lock_release_recursive
  .text._malloc_usable_size_r
-                0x0000000008004cc4       0x10 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-msizer.o)
-                0x0000000008004cc4                _malloc_usable_size_r
- .text          0x0000000008004cd4      0x378 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubdf3.o)
-                0x0000000008004cd4                __aeabi_drsub
-                0x0000000008004cdc                __aeabi_dsub
-                0x0000000008004cdc                __subdf3
-                0x0000000008004ce0                __aeabi_dadd
-                0x0000000008004ce0                __adddf3
-                0x0000000008004f58                __floatunsidf
-                0x0000000008004f58                __aeabi_ui2d
-                0x0000000008004f78                __floatsidf
-                0x0000000008004f78                __aeabi_i2d
-                0x0000000008004f9c                __aeabi_f2d
-                0x0000000008004f9c                __extendsfdf2
-                0x0000000008004fe0                __floatundidf
-                0x0000000008004fe0                __aeabi_ul2d
-                0x0000000008004ff0                __floatdidf
-                0x0000000008004ff0                __aeabi_l2d
- .text          0x000000000800504c      0x424 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_muldivdf3.o)
-                0x000000000800504c                __aeabi_dmul
-                0x000000000800504c                __muldf3
-                0x00000000080052a0                __divdf3
-                0x00000000080052a0                __aeabi_ddiv
- .text          0x0000000008005470      0x110 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_cmpdf2.o)
-                0x0000000008005470                __gtdf2
-                0x0000000008005470                __gedf2
-                0x0000000008005478                __ltdf2
-                0x0000000008005478                __ledf2
-                0x0000000008005480                __nedf2
-                0x0000000008005480                __eqdf2
-                0x0000000008005480                __cmpdf2
-                0x00000000080054fc                __aeabi_cdrcmple
-                0x000000000800550c                __aeabi_cdcmpeq
-                0x000000000800550c                __aeabi_cdcmple
-                0x000000000800551c                __aeabi_dcmpeq
-                0x0000000008005530                __aeabi_dcmplt
-                0x0000000008005544                __aeabi_dcmple
-                0x0000000008005558                __aeabi_dcmpge
-                0x000000000800556c                __aeabi_dcmpgt
- .text          0x0000000008005580       0x2c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_unorddf2.o)
-                0x0000000008005580                __unorddf2
-                0x0000000008005580                __aeabi_dcmpun
- .text          0x00000000080055ac       0x50 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixdfsi.o)
-                0x00000000080055ac                __aeabi_d2iz
-                0x00000000080055ac                __fixdfsi
- .text          0x00000000080055fc       0x40 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixunsdfsi.o)
-                0x00000000080055fc                __aeabi_d2uiz
-                0x00000000080055fc                __fixunsdfsi
- .text          0x000000000800563c       0xa0 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_truncdfsf2.o)
-                0x000000000800563c                __truncdfsf2
-                0x000000000800563c                __aeabi_d2f
+                0x00000000080051f4       0x10 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-msizer.o)
+                0x00000000080051f4                _malloc_usable_size_r
+ .text          0x0000000008005204      0x378 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubdf3.o)
+                0x0000000008005204                __aeabi_drsub
+                0x000000000800520c                __aeabi_dsub
+                0x000000000800520c                __subdf3
+                0x0000000008005210                __aeabi_dadd
+                0x0000000008005210                __adddf3
+                0x0000000008005488                __floatunsidf
+                0x0000000008005488                __aeabi_ui2d
+                0x00000000080054a8                __floatsidf
+                0x00000000080054a8                __aeabi_i2d
+                0x00000000080054cc                __aeabi_f2d
+                0x00000000080054cc                __extendsfdf2
+                0x0000000008005510                __floatundidf
+                0x0000000008005510                __aeabi_ul2d
+                0x0000000008005520                __floatdidf
+                0x0000000008005520                __aeabi_l2d
+ .text          0x000000000800557c      0x424 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_muldivdf3.o)
+                0x000000000800557c                __aeabi_dmul
+                0x000000000800557c                __muldf3
+                0x00000000080057d0                __divdf3
+                0x00000000080057d0                __aeabi_ddiv
+ .text          0x00000000080059a0      0x110 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_cmpdf2.o)
+                0x00000000080059a0                __gtdf2
+                0x00000000080059a0                __gedf2
+                0x00000000080059a8                __ltdf2
+                0x00000000080059a8                __ledf2
+                0x00000000080059b0                __nedf2
+                0x00000000080059b0                __eqdf2
+                0x00000000080059b0                __cmpdf2
+                0x0000000008005a2c                __aeabi_cdrcmple
+                0x0000000008005a3c                __aeabi_cdcmpeq
+                0x0000000008005a3c                __aeabi_cdcmple
+                0x0000000008005a4c                __aeabi_dcmpeq
+                0x0000000008005a60                __aeabi_dcmplt
+                0x0000000008005a74                __aeabi_dcmple
+                0x0000000008005a88                __aeabi_dcmpge
+                0x0000000008005a9c                __aeabi_dcmpgt
+ .text          0x0000000008005ab0       0x2c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_unorddf2.o)
+                0x0000000008005ab0                __unorddf2
+                0x0000000008005ab0                __aeabi_dcmpun
+ .text          0x0000000008005adc       0x50 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixdfsi.o)
+                0x0000000008005adc                __aeabi_d2iz
+                0x0000000008005adc                __fixdfsi
+ .text          0x0000000008005b2c       0x40 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixunsdfsi.o)
+                0x0000000008005b2c                __aeabi_d2uiz
+                0x0000000008005b2c                __fixunsdfsi
+ .text          0x0000000008005b6c       0xa0 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_truncdfsf2.o)
+                0x0000000008005b6c                __truncdfsf2
+                0x0000000008005b6c                __aeabi_d2f
  .text.__fixdfdi
-                0x00000000080056dc       0x34 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_fixdfdi.o)
-                0x00000000080056dc                __fixdfdi
-                0x00000000080056dc                __aeabi_d2lz
+                0x0000000008005c0c       0x34 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_fixdfdi.o)
+                0x0000000008005c0c                __fixdfdi
+                0x0000000008005c0c                __aeabi_d2lz
  .text.__fixunsdfdi
-                0x0000000008005710       0x3c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_fixunsdfdi.o)
-                0x0000000008005710                __fixunsdfdi
-                0x0000000008005710                __aeabi_d2ulz
+                0x0000000008005c40       0x3c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_fixunsdfdi.o)
+                0x0000000008005c40                __fixunsdfdi
+                0x0000000008005c40                __aeabi_d2ulz
  *(.rodata .rodata.* .constdata .constdata.*)
  .rodata.dumpExceptionStack.str1.4
-                0x000000000800574c      0x11a ./System/Src/cortexm/exception-handlers.o
- *fill*         0x0000000008005866        0x2 
+                0x0000000008005c7c      0x11a ./System/Src/cortexm/exception-handlers.o
+ *fill*         0x0000000008005d96        0x2 
  .rodata.str1.4
-                0x0000000008005868       0x2c ./System/Src/cortexm/exception-handlers.o
+                0x0000000008005d98       0x2c ./System/Src/cortexm/exception-handlers.o
                                          0x2a (size before relaxing)
- .rodata        0x0000000008005894       0x10 ./System/Src/CMSIS/system_gd32f4xx.o
- .rodata.img_logo
-                0x00000000080058a4    0x1c200 ./Src/main.o
-                0x00000000080058a4                img_logo
- .rodata.img_logo1
-                0x0000000008021aa4    0x1c200 ./Src/main.o
-                0x0000000008021aa4                img_logo1
+ .rodata        0x0000000008005dc4       0x10 ./System/Src/CMSIS/system_gd32f4xx.o
  .rodata._printf_float.str1.1
-                0x000000000803dca4       0x12 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_float.o)
+                0x0000000008005dd4       0x12 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_float.o)
  .rodata._printf_i.str1.1
-                0x000000000803dcb6       0x22 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000008005de6       0x22 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
  .rodata._scanf_float.str1.1
-                0x000000000803dcd8        0x5 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfscanf_float.o)
+                0x0000000008005e08        0x5 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfscanf_float.o)
                                           0x6 (size before relaxing)
  .rodata._strtod_l.str1.1
-                0x000000000803dcdd        0x5 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtod.o)
+                0x0000000008005e0d        0x5 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtod.o)
                                           0xd (size before relaxing)
- *fill*         0x000000000803dcdd        0x3 
+ *fill*         0x0000000008005e0d        0x3 
  .rodata.fpi.6223
-                0x000000000803dce0       0x14 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtod.o)
+                0x0000000008005e10       0x14 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtod.o)
  .rodata.fpinan.6259
-                0x000000000803dcf4       0x14 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtod.o)
+                0x0000000008005e24       0x14 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtod.o)
  .rodata.tinytens
-                0x000000000803dd08       0x28 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtod.o)
+                0x0000000008005e38       0x28 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtod.o)
  .rodata._ctype_
-                0x000000000803dd30      0x101 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-ctype_.o)
-                0x000000000803dd30                _ctype_
+                0x0000000008005e60      0x101 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-ctype_.o)
+                0x0000000008005e60                _ctype_
  .rodata._dtoa_r.str1.1
-                0x000000000803de31        0xd c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-dtoa.o)
+                0x0000000008005f61        0xd c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-dtoa.o)
                                           0xf (size before relaxing)
- *fill*         0x000000000803de3e        0x2 
+ *fill*         0x0000000008005f6e        0x2 
  .rodata._C_numeric_locale
-                0x000000000803de40        0xc c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lnumeric.o)
-                0x000000000803de40                _C_numeric_locale
+                0x0000000008005f70        0xc c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lnumeric.o)
+                0x0000000008005f70                _C_numeric_locale
  .rodata.str1.1
-                0x000000000803de4c        0x2 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lnumeric.o)
+                0x0000000008005f7c        0x2 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lnumeric.o)
                                           0x3 (size before relaxing)
  .rodata._setlocale_r.str1.1
-                0x000000000803de4e        0x8 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-locale.o)
+                0x0000000008005f7e        0x8 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-locale.o)
                                           0x9 (size before relaxing)
  .rodata.str1.1
-                0x000000000803de56        0x2 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-locale.o)
- *fill*         0x000000000803de56        0x2 
+                0x0000000008005f86        0x2 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-locale.o)
+ *fill*         0x0000000008005f86        0x2 
  .rodata.__mprec_bigtens
-                0x000000000803de58       0x28 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
-                0x000000000803de58                __mprec_bigtens
+                0x0000000008005f88       0x28 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x0000000008005f88                __mprec_bigtens
  .rodata.__mprec_tens
-                0x000000000803de80       0xc8 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
-                0x000000000803de80                __mprec_tens
+                0x0000000008005fb0       0xc8 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x0000000008005fb0                __mprec_tens
  .rodata.p05.6147
-                0x000000000803df48        0xc c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x0000000008006078        0xc c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
  .rodata._svfprintf_r.str1.1
-                0x000000000803df54       0x11 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x0000000008006084       0x11 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
  *(vtable)
  *(.eh_frame*)
  *(.glue_7)
- .glue_7        0x000000000803df65        0x0 linker stubs
+ .glue_7        0x0000000008006095        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x000000000803df65        0x0 linker stubs
+ .glue_7t       0x0000000008006095        0x0 linker stubs
 
-.vfp11_veneer   0x000000000803df68        0x0
- .vfp11_veneer  0x000000000803df68        0x0 linker stubs
+.vfp11_veneer   0x0000000008006098        0x0
+ .vfp11_veneer  0x0000000008006098        0x0 linker stubs
 
-.v4_bx          0x000000000803df68        0x0
- .v4_bx         0x000000000803df68        0x0 linker stubs
+.v4_bx          0x0000000008006098        0x0
+ .v4_bx         0x0000000008006098        0x0 linker stubs
 
-.iplt           0x000000000803df68        0x0
- .iplt          0x000000000803df68        0x0 ./System/Src/newlib/exit.o
+.iplt           0x0000000008006098        0x0
+ .iplt          0x0000000008006098        0x0 ./System/Src/newlib/exit.o
 
-.rel.dyn        0x000000000803df68        0x0
- .rel.iplt      0x000000000803df68        0x0 ./System/Src/newlib/exit.o
+.rel.dyn        0x0000000008006098        0x0
+ .rel.iplt      0x0000000008006098        0x0 ./System/Src/newlib/exit.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000000000803df68                . = ALIGN (0x4)
-                0x000000000803df68                __exidx_start = .
+                0x0000000008006098                . = ALIGN (0x4)
+                0x0000000008006098                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x000000000803df68                __exidx_end = .
-                0x000000000803df68                . = ALIGN (0x4)
-                0x000000000803df68                _etext = .
-                0x000000000803df68                __etext = .
+                0x0000000008006098                __exidx_end = .
+                0x0000000008006098                . = ALIGN (0x4)
+                0x0000000008006098                _etext = .
+                0x0000000008006098                __etext = .
 
-.data_CCMRAM    0x0000000010000000        0x0 load address 0x000000000803df68
+.data_CCMRAM    0x0000000010000000        0x0 load address 0x0000000008006098
  FILL mask 0xff
  *(.data.CCMRAM .data.CCMRAM.*)
                 0x0000000010000000                . = ALIGN (0x4)
-                0x000000000803df68                _sidata = LOADADDR (.data)
+                0x0000000008006098                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000      0x1ec load address 0x000000000803df68
+.data           0x0000000020000000      0x1ec load address 0x0000000008006098
  FILL mask 0xff
                 0x0000000020000000                _sdata = .
                 0x0000000020000000                __data_start__ = .
@@ -7140,13 +7239,13 @@ END GROUP
                 0x00000000200001ec                _edata = .
                 0x00000000200001ec                __data_end__ = .
 
-.igot.plt       0x00000000200001ec        0x0 load address 0x000000000803e154
+.igot.plt       0x00000000200001ec        0x0 load address 0x0000000008006284
  .igot.plt      0x00000000200001ec        0x0 ./System/Src/newlib/exit.o
 
 .bss_CCMRAM     0x0000000010000000        0x0
  *(.bss.CCMRAM .bss.CCMRAM.*)
 
-.bss            0x00000000200001ec       0xac
+.bss            0x00000000200001ec       0xb0
                 0x00000000200001ec                __bss_start__ = .
                 0x00000000200001ec                _sbss = .
  *(.bss_begin .bss_begin.*)
@@ -7167,41 +7266,45 @@ END GROUP
  *(COMMON)
  COMMON         0x0000000020000280        0x4 ./System/Src/newlib/syscalls.o
                 0x0000000020000280                errno
- COMMON         0x0000000020000284        0x4 ./Src/timer.o
-                0x0000000020000284                timer_delayCount
- COMMON         0x0000000020000288        0x9 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
-                0x0000000020000288                __lock___atexit_recursive_mutex
-                0x0000000020000289                __lock___arc4random_mutex
-                0x000000002000028a                __lock___env_recursive_mutex
-                0x000000002000028b                __lock___sinit_recursive_mutex
-                0x000000002000028c                __lock___malloc_recursive_mutex
-                0x000000002000028d                __lock___at_quick_exit_mutex
-                0x000000002000028e                __lock___dd_hash_mutex
-                0x000000002000028f                __lock___tz_mutex
-                0x0000000020000290                __lock___sfp_recursive_mutex
+ COMMON         0x0000000020000284        0x2 ./System/Src/gd32f4xx/gd32f4xx_it.o
+                0x0000000020000284                out_state
+                0x0000000020000285                out_symbol
+ *fill*         0x0000000020000286        0x2 
+ COMMON         0x0000000020000288        0x4 ./Src/timer.o
+                0x0000000020000288                timer_delayCount
+ COMMON         0x000000002000028c        0x9 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
+                0x000000002000028c                __lock___atexit_recursive_mutex
+                0x000000002000028d                __lock___arc4random_mutex
+                0x000000002000028e                __lock___env_recursive_mutex
+                0x000000002000028f                __lock___sinit_recursive_mutex
+                0x0000000020000290                __lock___malloc_recursive_mutex
+                0x0000000020000291                __lock___at_quick_exit_mutex
+                0x0000000020000292                __lock___dd_hash_mutex
+                0x0000000020000293                __lock___tz_mutex
+                0x0000000020000294                __lock___sfp_recursive_mutex
  *(.bss_end .bss_end.*)
- *fill*         0x0000000020000291        0x3 
- .bss_end       0x0000000020000294        0x4 ./System/Src/newlib/startup.o
-                0x0000000020000298                . = ALIGN (0x4)
-                0x0000000020000298                __bss_end__ = .
-                0x0000000020000298                _ebss = .
+ *fill*         0x0000000020000295        0x3 
+ .bss_end       0x0000000020000298        0x4 ./System/Src/newlib/startup.o
+                0x000000002000029c                . = ALIGN (0x4)
+                0x000000002000029c                __bss_end__ = .
+                0x000000002000029c                _ebss = .
 
 .noinit_CCMRAM
  *(.noinit.CCMRAM .noinit.CCMRAM.*)
 
-.noinit         0x0000000020000298        0x0
-                0x0000000020000298                _noinit = .
+.noinit         0x000000002000029c        0x0
+                0x000000002000029c                _noinit = .
  *(.noinit .noinit.*)
-                0x0000000020000298                . = ALIGN (0x4)
-                0x0000000020000298                _end_noinit = .
+                0x000000002000029c                . = ALIGN (0x4)
+                0x000000002000029c                _end_noinit = .
                 [!provide]                        PROVIDE (end = _end_noinit)
                 [!provide]                        PROVIDE (_end = _end_noinit)
                 [!provide]                        PROVIDE (__end = _end_noinit)
                 [!provide]                        PROVIDE (__end__ = _end_noinit)
 
-._check_stack   0x0000000020000298      0x100
-                0x0000000020000398                . = (. + _Minimum_Stack_Size)
- *fill*         0x0000000020000298      0x100 
+._check_stack   0x000000002000029c      0x100
+                0x000000002000039c                . = (. + _Minimum_Stack_Size)
+ *fill*         0x000000002000029c      0x100 
 
 .b1text
  *(.b1text)
@@ -7254,8 +7357,11 @@ END GROUP
  .comment       0x0000000000000068       0x69 ./System/Src/newlib/startup.o
  .comment       0x0000000000000068       0x69 ./System/Src/newlib/syscalls.o
  .comment       0x0000000000000068       0x69 ./System/Src/gd32f4xx/gd32f4xx_gpio.o
+ .comment       0x0000000000000068       0x69 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .comment       0x0000000000000068       0x69 ./System/Src/gd32f4xx/gd32f4xx_misc.o
  .comment       0x0000000000000068       0x69 ./System/Src/gd32f4xx/gd32f4xx_rcu.o
  .comment       0x0000000000000068       0x69 ./System/Src/gd32f4xx/gd32f4xx_spi.o
+ .comment       0x0000000000000068       0x69 ./System/Src/gd32f4xx/gd32f4xx_timer.o
  .comment       0x0000000000000068       0x69 ./System/Src/diag/trace-impl.o
  .comment       0x0000000000000068       0x69 ./System/Src/diag/trace.o
  .comment       0x0000000000000068       0x69 ./System/Src/cortexm/exception-handlers.o
@@ -7279,119 +7385,125 @@ END GROUP
  .ARM.attributes
                 0x00000000000000b8       0x2e ./System/Src/gd32f4xx/gd32f4xx_gpio.o
  .ARM.attributes
-                0x00000000000000e6       0x2e ./System/Src/gd32f4xx/gd32f4xx_rcu.o
+                0x00000000000000e6       0x2e ./System/Src/gd32f4xx/gd32f4xx_it.o
  .ARM.attributes
-                0x0000000000000114       0x2e ./System/Src/gd32f4xx/gd32f4xx_spi.o
+                0x0000000000000114       0x2e ./System/Src/gd32f4xx/gd32f4xx_misc.o
  .ARM.attributes
-                0x0000000000000142       0x2e ./System/Src/diag/trace-impl.o
+                0x0000000000000142       0x2e ./System/Src/gd32f4xx/gd32f4xx_rcu.o
  .ARM.attributes
-                0x0000000000000170       0x2e ./System/Src/diag/trace.o
+                0x0000000000000170       0x2e ./System/Src/gd32f4xx/gd32f4xx_spi.o
  .ARM.attributes
-                0x000000000000019e       0x2e ./System/Src/cortexm/exception-handlers.o
+                0x000000000000019e       0x2e ./System/Src/gd32f4xx/gd32f4xx_timer.o
  .ARM.attributes
-                0x00000000000001cc       0x2e ./System/Src/cortexm/initialize-hardware.o
+                0x00000000000001cc       0x2e ./System/Src/diag/trace-impl.o
  .ARM.attributes
-                0x00000000000001fa       0x2e ./System/Src/CMSIS/system_gd32f4xx.o
+                0x00000000000001fa       0x2e ./System/Src/diag/trace.o
  .ARM.attributes
-                0x0000000000000228       0x2e ./System/Src/CMSIS/vectors_gd32f4xx.o
+                0x0000000000000228       0x2e ./System/Src/cortexm/exception-handlers.o
  .ARM.attributes
-                0x0000000000000256       0x2e ./Src/ILI9341_GFX.o
+                0x0000000000000256       0x2e ./System/Src/cortexm/initialize-hardware.o
  .ARM.attributes
-                0x0000000000000284       0x2e ./Src/main.o
+                0x0000000000000284       0x2e ./System/Src/CMSIS/system_gd32f4xx.o
  .ARM.attributes
-                0x00000000000002b2       0x2e ./Src/timer.o
+                0x00000000000002b2       0x2e ./System/Src/CMSIS/vectors_gd32f4xx.o
  .ARM.attributes
-                0x00000000000002e0       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-errno.o)
+                0x00000000000002e0       0x2e ./Src/ILI9341_GFX.o
  .ARM.attributes
-                0x000000000000030e       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-impure.o)
+                0x000000000000030e       0x2e ./Src/main.o
  .ARM.attributes
-                0x000000000000033c       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
+                0x000000000000033c       0x2e ./Src/timer.o
  .ARM.attributes
-                0x000000000000036a       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_float.o)
+                0x000000000000036a       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-errno.o)
  .ARM.attributes
-                0x0000000000000398       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000000000398       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-impure.o)
  .ARM.attributes
-                0x00000000000003c6       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfscanf_float.o)
+                0x00000000000003c6       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
  .ARM.attributes
-                0x00000000000003f4       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sf_nan.o)
+                0x00000000000003f4       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_float.o)
  .ARM.attributes
-                0x0000000000000422       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sprintf.o)
+                0x0000000000000422       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
  .ARM.attributes
-                0x0000000000000450       0x17 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strlen.o)
+                0x0000000000000450       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfscanf_float.o)
  .ARM.attributes
-                0x0000000000000467       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtod.o)
+                0x000000000000047e       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sf_nan.o)
  .ARM.attributes
-                0x0000000000000495       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtol.o)
+                0x00000000000004ac       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sprintf.o)
  .ARM.attributes
-                0x00000000000004c3       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-vsnprintf.o)
+                0x00000000000004da       0x17 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strlen.o)
  .ARM.attributes
-                0x00000000000004f1       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-ctype_.o)
+                0x00000000000004f1       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtod.o)
  .ARM.attributes
-                0x000000000000051f       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-dtoa.o)
+                0x000000000000051f       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtol.o)
  .ARM.attributes
-                0x000000000000054d       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gdtoa-gethex.o)
+                0x000000000000054d       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-vsnprintf.o)
  .ARM.attributes
-                0x000000000000057b       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gdtoa-hexnan.o)
+                0x000000000000057b       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-ctype_.o)
  .ARM.attributes
-                0x00000000000005a9       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lnumeric.o)
+                0x00000000000005a9       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-dtoa.o)
  .ARM.attributes
-                0x00000000000005d7       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-locale.o)
+                0x00000000000005d7       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gdtoa-gethex.o)
  .ARM.attributes
-                0x0000000000000605       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-localeconv.o)
+                0x0000000000000605       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gdtoa-hexnan.o)
  .ARM.attributes
-                0x0000000000000633       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-malloc.o)
+                0x0000000000000633       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lnumeric.o)
  .ARM.attributes
-                0x0000000000000661       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mbtowc_r.o)
+                0x0000000000000661       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-locale.o)
  .ARM.attributes
-                0x000000000000068f       0x1c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memchr.o)
+                0x000000000000068f       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-localeconv.o)
  .ARM.attributes
-                0x00000000000006ab       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+                0x00000000000006bd       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-malloc.o)
  .ARM.attributes
-                0x00000000000006d9       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-callocr.o)
+                0x00000000000006eb       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mbtowc_r.o)
  .ARM.attributes
-                0x0000000000000707       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-freer.o)
+                0x0000000000000719       0x1c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memchr.o)
  .ARM.attributes
-                0x0000000000000735       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
+                0x0000000000000735       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
  .ARM.attributes
-                0x0000000000000763       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x0000000000000763       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-callocr.o)
  .ARM.attributes
-                0x0000000000000791       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-s_nan.o)
+                0x0000000000000791       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-freer.o)
  .ARM.attributes
-                0x00000000000007bf       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sbrkr.o)
+                0x00000000000007bf       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
  .ARM.attributes
-                0x00000000000007ed       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strncmp.o)
+                0x00000000000007ed       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
  .ARM.attributes
-                0x000000000000081b       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-wctomb_r.o)
+                0x000000000000081b       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-s_nan.o)
  .ARM.attributes
-                0x0000000000000849       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memmove.o)
+                0x0000000000000849       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sbrkr.o)
  .ARM.attributes
-                0x0000000000000877       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memset.o)
+                0x0000000000000877       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strncmp.o)
  .ARM.attributes
-                0x00000000000008a5       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mlock.o)
+                0x00000000000008a5       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-wctomb_r.o)
  .ARM.attributes
-                0x00000000000008d3       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-reallocr.o)
+                0x00000000000008d3       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memmove.o)
  .ARM.attributes
-                0x0000000000000901       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
+                0x0000000000000901       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memset.o)
  .ARM.attributes
-                0x000000000000092f       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-msizer.o)
+                0x000000000000092f       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mlock.o)
  .ARM.attributes
-                0x000000000000095d       0x1e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubdf3.o)
+                0x000000000000095d       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-reallocr.o)
  .ARM.attributes
-                0x000000000000097b       0x1e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_muldivdf3.o)
+                0x000000000000098b       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
  .ARM.attributes
-                0x0000000000000999       0x1e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_cmpdf2.o)
+                0x00000000000009b9       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-msizer.o)
  .ARM.attributes
-                0x00000000000009b7       0x1e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_unorddf2.o)
+                0x00000000000009e7       0x1e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubdf3.o)
  .ARM.attributes
-                0x00000000000009d5       0x1e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixdfsi.o)
+                0x0000000000000a05       0x1e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_muldivdf3.o)
  .ARM.attributes
-                0x00000000000009f3       0x1e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixunsdfsi.o)
+                0x0000000000000a23       0x1e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_cmpdf2.o)
  .ARM.attributes
-                0x0000000000000a11       0x1e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_truncdfsf2.o)
+                0x0000000000000a41       0x1e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_unorddf2.o)
  .ARM.attributes
-                0x0000000000000a2f       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_fixdfdi.o)
+                0x0000000000000a5f       0x1e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixdfsi.o)
  .ARM.attributes
-                0x0000000000000a5d       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_fixunsdfdi.o)
+                0x0000000000000a7d       0x1e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixunsdfsi.o)
+ .ARM.attributes
+                0x0000000000000a9b       0x1e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_truncdfsf2.o)
+ .ARM.attributes
+                0x0000000000000ab9       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_fixdfdi.o)
+ .ARM.attributes
+                0x0000000000000ae7       0x2e c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_fixunsdfdi.o)
 
 .debug
  *(.debug)
@@ -7405,7 +7517,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000      0x6d0
+.debug_aranges  0x0000000000000000      0x9f0
  *(.debug_aranges)
  .debug_aranges
                 0x0000000000000000       0x28 ./System/Src/newlib/exit.o
@@ -7418,200 +7530,227 @@ END GROUP
  .debug_aranges
                 0x00000000000000b8       0x90 ./System/Src/gd32f4xx/gd32f4xx_gpio.o
  .debug_aranges
-                0x0000000000000148      0x190 ./System/Src/gd32f4xx/gd32f4xx_rcu.o
+                0x0000000000000148       0x68 ./System/Src/gd32f4xx/gd32f4xx_it.o
  .debug_aranges
-                0x00000000000002d8      0x150 ./System/Src/gd32f4xx/gd32f4xx_spi.o
+                0x00000000000001b0       0x50 ./System/Src/gd32f4xx/gd32f4xx_misc.o
  .debug_aranges
-                0x0000000000000428       0x30 ./System/Src/diag/trace-impl.o
+                0x0000000000000200      0x190 ./System/Src/gd32f4xx/gd32f4xx_rcu.o
  .debug_aranges
-                0x0000000000000458       0x38 ./System/Src/diag/trace.o
+                0x0000000000000390      0x150 ./System/Src/gd32f4xx/gd32f4xx_spi.o
  .debug_aranges
-                0x0000000000000490       0x90 ./System/Src/cortexm/exception-handlers.o
+                0x00000000000004e0      0x258 ./System/Src/gd32f4xx/gd32f4xx_timer.o
  .debug_aranges
-                0x0000000000000520       0x28 ./System/Src/cortexm/initialize-hardware.o
+                0x0000000000000738       0x30 ./System/Src/diag/trace-impl.o
  .debug_aranges
-                0x0000000000000548       0x38 ./System/Src/CMSIS/system_gd32f4xx.o
+                0x0000000000000768       0x38 ./System/Src/diag/trace.o
  .debug_aranges
-                0x0000000000000580       0x20 ./System/Src/CMSIS/vectors_gd32f4xx.o
+                0x00000000000007a0       0x90 ./System/Src/cortexm/exception-handlers.o
  .debug_aranges
-                0x00000000000005a0       0xc0 ./Src/ILI9341_GFX.o
+                0x0000000000000830       0x28 ./System/Src/cortexm/initialize-hardware.o
  .debug_aranges
-                0x0000000000000660       0x38 ./Src/main.o
+                0x0000000000000858       0x38 ./System/Src/CMSIS/system_gd32f4xx.o
  .debug_aranges
-                0x0000000000000698       0x38 ./Src/timer.o
+                0x0000000000000890       0x20 ./System/Src/CMSIS/vectors_gd32f4xx.o
+ .debug_aranges
+                0x00000000000008b0       0xc0 ./Src/ILI9341_GFX.o
+ .debug_aranges
+                0x0000000000000970       0x48 ./Src/main.o
+ .debug_aranges
+                0x00000000000009b8       0x38 ./Src/timer.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0xbe1d
+.debug_info     0x0000000000000000     0xe57c
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x9e7 ./System/Src/newlib/exit.o
  .debug_info    0x00000000000009e7      0x9d4 ./System/Src/newlib/sbrk.o
  .debug_info    0x00000000000013bb      0x4ce ./System/Src/newlib/startup.o
  .debug_info    0x0000000000001889      0xab9 ./System/Src/newlib/syscalls.o
  .debug_info    0x0000000000002342      0x85a ./System/Src/gd32f4xx/gd32f4xx_gpio.o
- .debug_info    0x0000000000002b9c     0x159c ./System/Src/gd32f4xx/gd32f4xx_rcu.o
- .debug_info    0x0000000000004138      0xd8c ./System/Src/gd32f4xx/gd32f4xx_spi.o
- .debug_info    0x0000000000004ec4      0x3be ./System/Src/diag/trace-impl.o
- .debug_info    0x0000000000005282      0xbdb ./System/Src/diag/trace.o
- .debug_info    0x0000000000005e5d     0x1296 ./System/Src/cortexm/exception-handlers.o
- .debug_info    0x00000000000070f3      0x2d6 ./System/Src/cortexm/initialize-hardware.o
- .debug_info    0x00000000000073c9      0x264 ./System/Src/CMSIS/system_gd32f4xx.o
- .debug_info    0x000000000000762d       0xd1 ./System/Src/CMSIS/vectors_gd32f4xx.o
- .debug_info    0x00000000000076fe     0x2e8f ./Src/ILI9341_GFX.o
- .debug_info    0x000000000000a58d     0x1121 ./Src/main.o
- .debug_info    0x000000000000b6ae      0x76f ./Src/timer.o
+ .debug_info    0x0000000000002b9c      0x40b ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_info    0x0000000000002fa7      0x5bd ./System/Src/gd32f4xx/gd32f4xx_misc.o
+ .debug_info    0x0000000000003564     0x159c ./System/Src/gd32f4xx/gd32f4xx_rcu.o
+ .debug_info    0x0000000000004b00      0xd8c ./System/Src/gd32f4xx/gd32f4xx_spi.o
+ .debug_info    0x000000000000588c     0x18e5 ./System/Src/gd32f4xx/gd32f4xx_timer.o
+ .debug_info    0x0000000000007171      0x3be ./System/Src/diag/trace-impl.o
+ .debug_info    0x000000000000752f      0xbdb ./System/Src/diag/trace.o
+ .debug_info    0x000000000000810a     0x1296 ./System/Src/cortexm/exception-handlers.o
+ .debug_info    0x00000000000093a0      0x2d6 ./System/Src/cortexm/initialize-hardware.o
+ .debug_info    0x0000000000009676      0x264 ./System/Src/CMSIS/system_gd32f4xx.o
+ .debug_info    0x00000000000098da       0xd1 ./System/Src/CMSIS/vectors_gd32f4xx.o
+ .debug_info    0x00000000000099ab     0x2e8f ./Src/ILI9341_GFX.o
+ .debug_info    0x000000000000c83a     0x15d3 ./Src/main.o
+ .debug_info    0x000000000000de0d      0x76f ./Src/timer.o
 
-.debug_abbrev   0x0000000000000000     0x226e
+.debug_abbrev   0x0000000000000000     0x2748
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000      0x222 ./System/Src/newlib/exit.o
  .debug_abbrev  0x0000000000000222      0x232 ./System/Src/newlib/sbrk.o
  .debug_abbrev  0x0000000000000454      0x1d7 ./System/Src/newlib/startup.o
  .debug_abbrev  0x000000000000062b      0x26d ./System/Src/newlib/syscalls.o
  .debug_abbrev  0x0000000000000898      0x203 ./System/Src/gd32f4xx/gd32f4xx_gpio.o
- .debug_abbrev  0x0000000000000a9b      0x1fb ./System/Src/gd32f4xx/gd32f4xx_rcu.o
- .debug_abbrev  0x0000000000000c96      0x207 ./System/Src/gd32f4xx/gd32f4xx_spi.o
- .debug_abbrev  0x0000000000000e9d      0x221 ./System/Src/diag/trace-impl.o
- .debug_abbrev  0x00000000000010be      0x2c6 ./System/Src/diag/trace.o
- .debug_abbrev  0x0000000000001384      0x372 ./System/Src/cortexm/exception-handlers.o
- .debug_abbrev  0x00000000000016f6       0xfc ./System/Src/cortexm/initialize-hardware.o
- .debug_abbrev  0x00000000000017f2      0x179 ./System/Src/CMSIS/system_gd32f4xx.o
- .debug_abbrev  0x000000000000196b       0xa5 ./System/Src/CMSIS/vectors_gd32f4xx.o
- .debug_abbrev  0x0000000000001a10      0x393 ./Src/ILI9341_GFX.o
- .debug_abbrev  0x0000000000001da3      0x2da ./Src/main.o
- .debug_abbrev  0x000000000000207d      0x1f1 ./Src/timer.o
+ .debug_abbrev  0x0000000000000a9b      0x155 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_abbrev  0x0000000000000bf0      0x18f ./System/Src/gd32f4xx/gd32f4xx_misc.o
+ .debug_abbrev  0x0000000000000d7f      0x1fb ./System/Src/gd32f4xx/gd32f4xx_rcu.o
+ .debug_abbrev  0x0000000000000f7a      0x207 ./System/Src/gd32f4xx/gd32f4xx_spi.o
+ .debug_abbrev  0x0000000000001181      0x1ed ./System/Src/gd32f4xx/gd32f4xx_timer.o
+ .debug_abbrev  0x000000000000136e      0x221 ./System/Src/diag/trace-impl.o
+ .debug_abbrev  0x000000000000158f      0x2c6 ./System/Src/diag/trace.o
+ .debug_abbrev  0x0000000000001855      0x372 ./System/Src/cortexm/exception-handlers.o
+ .debug_abbrev  0x0000000000001bc7       0xfc ./System/Src/cortexm/initialize-hardware.o
+ .debug_abbrev  0x0000000000001cc3      0x179 ./System/Src/CMSIS/system_gd32f4xx.o
+ .debug_abbrev  0x0000000000001e3c       0xa5 ./System/Src/CMSIS/vectors_gd32f4xx.o
+ .debug_abbrev  0x0000000000001ee1      0x393 ./Src/ILI9341_GFX.o
+ .debug_abbrev  0x0000000000002274      0x2e3 ./Src/main.o
+ .debug_abbrev  0x0000000000002557      0x1f1 ./Src/timer.o
 
-.debug_line     0x0000000000000000     0x74c9
+.debug_line     0x0000000000000000     0x9706
  *(.debug_line)
  .debug_line    0x0000000000000000      0x405 ./System/Src/newlib/exit.o
  .debug_line    0x0000000000000405      0x3fa ./System/Src/newlib/sbrk.o
  .debug_line    0x00000000000007ff      0x61b ./System/Src/newlib/startup.o
  .debug_line    0x0000000000000e1a      0x509 ./System/Src/newlib/syscalls.o
  .debug_line    0x0000000000001323      0x721 ./System/Src/gd32f4xx/gd32f4xx_gpio.o
- .debug_line    0x0000000000001a44      0xed9 ./System/Src/gd32f4xx/gd32f4xx_rcu.o
- .debug_line    0x000000000000291d      0xb1f ./System/Src/gd32f4xx/gd32f4xx_spi.o
- .debug_line    0x000000000000343c      0x757 ./System/Src/diag/trace-impl.o
- .debug_line    0x0000000000003b93      0x4e2 ./System/Src/diag/trace.o
- .debug_line    0x0000000000004075      0x941 ./System/Src/cortexm/exception-handlers.o
- .debug_line    0x00000000000049b6      0x3af ./System/Src/cortexm/initialize-hardware.o
- .debug_line    0x0000000000004d65      0x5e2 ./System/Src/CMSIS/system_gd32f4xx.o
- .debug_line    0x0000000000005347      0x135 ./System/Src/CMSIS/vectors_gd32f4xx.o
- .debug_line    0x000000000000547c     0x146a ./Src/ILI9341_GFX.o
- .debug_line    0x00000000000068e6      0x771 ./Src/main.o
- .debug_line    0x0000000000007057      0x472 ./Src/timer.o
+ .debug_line    0x0000000000001a44      0x567 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_line    0x0000000000001fab      0x507 ./System/Src/gd32f4xx/gd32f4xx_misc.o
+ .debug_line    0x00000000000024b2      0xed9 ./System/Src/gd32f4xx/gd32f4xx_rcu.o
+ .debug_line    0x000000000000338b      0xb1f ./System/Src/gd32f4xx/gd32f4xx_spi.o
+ .debug_line    0x0000000000003eaa     0x1756 ./System/Src/gd32f4xx/gd32f4xx_timer.o
+ .debug_line    0x0000000000005600      0x757 ./System/Src/diag/trace-impl.o
+ .debug_line    0x0000000000005d57      0x4e2 ./System/Src/diag/trace.o
+ .debug_line    0x0000000000006239      0x941 ./System/Src/cortexm/exception-handlers.o
+ .debug_line    0x0000000000006b7a      0x3af ./System/Src/cortexm/initialize-hardware.o
+ .debug_line    0x0000000000006f29      0x5e2 ./System/Src/CMSIS/system_gd32f4xx.o
+ .debug_line    0x000000000000750b      0x135 ./System/Src/CMSIS/vectors_gd32f4xx.o
+ .debug_line    0x0000000000007640     0x146a ./Src/ILI9341_GFX.o
+ .debug_line    0x0000000000008aaa      0x7ea ./Src/main.o
+ .debug_line    0x0000000000009294      0x472 ./Src/timer.o
 
-.debug_frame    0x0000000000000000     0x1d68
+.debug_frame    0x0000000000000000     0x23ec
  *(.debug_frame)
  .debug_frame   0x0000000000000000       0x38 ./System/Src/newlib/exit.o
  .debug_frame   0x0000000000000038       0x28 ./System/Src/newlib/sbrk.o
  .debug_frame   0x0000000000000060       0x7c ./System/Src/newlib/startup.o
  .debug_frame   0x00000000000000dc       0x50 ./System/Src/newlib/syscalls.o
  .debug_frame   0x000000000000012c      0x13c ./System/Src/gd32f4xx/gd32f4xx_gpio.o
- .debug_frame   0x0000000000000268      0x344 ./System/Src/gd32f4xx/gd32f4xx_rcu.o
- .debug_frame   0x00000000000005ac      0x2b0 ./System/Src/gd32f4xx/gd32f4xx_spi.o
- .debug_frame   0x000000000000085c       0x64 ./System/Src/diag/trace-impl.o
- .debug_frame   0x00000000000008c0       0x94 ./System/Src/diag/trace.o
- .debug_frame   0x0000000000000954      0x158 ./System/Src/cortexm/exception-handlers.o
- .debug_frame   0x0000000000000aac       0x40 ./System/Src/cortexm/initialize-hardware.o
- .debug_frame   0x0000000000000aec       0x70 ./System/Src/CMSIS/system_gd32f4xx.o
- .debug_frame   0x0000000000000b5c       0x20 ./System/Src/CMSIS/vectors_gd32f4xx.o
- .debug_frame   0x0000000000000b7c      0x2bc ./Src/ILI9341_GFX.o
- .debug_frame   0x0000000000000e38       0x78 ./Src/main.o
- .debug_frame   0x0000000000000eb0       0x58 ./Src/timer.o
- .debug_frame   0x0000000000000f08       0x20 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-errno.o)
- .debug_frame   0x0000000000000f28       0x28 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x0000000000000f50       0x94 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_float.o)
- .debug_frame   0x0000000000000fe4       0x60 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
- .debug_frame   0x0000000000001044       0x40 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfscanf_float.o)
- .debug_frame   0x0000000000001084       0x20 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sf_nan.o)
- .debug_frame   0x00000000000010a4       0x6c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sprintf.o)
- .debug_frame   0x0000000000001110       0xe8 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtod.o)
- .debug_frame   0x00000000000011f8       0x64 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtol.o)
- .debug_frame   0x000000000000125c       0x4c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-vsnprintf.o)
- .debug_frame   0x00000000000012a8       0x6c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-dtoa.o)
- .debug_frame   0x0000000000001314       0x70 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gdtoa-gethex.o)
- .debug_frame   0x0000000000001384       0x74 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gdtoa-hexnan.o)
- .debug_frame   0x00000000000013f8       0x20 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lnumeric.o)
- .debug_frame   0x0000000000001418       0x48 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-locale.o)
- .debug_frame   0x0000000000001460       0x40 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-localeconv.o)
- .debug_frame   0x00000000000014a0       0x30 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-malloc.o)
- .debug_frame   0x00000000000014d0       0x48 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mbtowc_r.o)
- .debug_frame   0x0000000000001518      0x248 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
- .debug_frame   0x0000000000001760       0x2c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-callocr.o)
- .debug_frame   0x000000000000178c       0x38 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x00000000000017c4       0x30 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x00000000000017f4       0x90 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
- .debug_frame   0x0000000000001884       0x20 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-s_nan.o)
- .debug_frame   0x00000000000018a4       0x2c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sbrkr.o)
- .debug_frame   0x00000000000018d0       0x28 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strncmp.o)
- .debug_frame   0x00000000000018f8       0x3c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-wctomb_r.o)
- .debug_frame   0x0000000000001934       0x28 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memmove.o)
- .debug_frame   0x000000000000195c       0x20 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memset.o)
- .debug_frame   0x000000000000197c       0x30 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mlock.o)
- .debug_frame   0x00000000000019ac       0x3c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-reallocr.o)
- .debug_frame   0x00000000000019e8       0xb0 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
- .debug_frame   0x0000000000001a98       0x20 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-msizer.o)
- .debug_frame   0x0000000000001ab8       0xac c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x0000000000001b64       0x50 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_muldivdf3.o)
- .debug_frame   0x0000000000001bb4       0xc4 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_cmpdf2.o)
- .debug_frame   0x0000000000001c78       0x20 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_unorddf2.o)
- .debug_frame   0x0000000000001c98       0x24 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixdfsi.o)
- .debug_frame   0x0000000000001cbc       0x24 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixunsdfsi.o)
- .debug_frame   0x0000000000001ce0       0x24 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_truncdfsf2.o)
- .debug_frame   0x0000000000001d04       0x38 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_fixdfdi.o)
- .debug_frame   0x0000000000001d3c       0x2c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_fixunsdfdi.o)
+ .debug_frame   0x0000000000000268       0xc0 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_frame   0x0000000000000328       0x8c ./System/Src/gd32f4xx/gd32f4xx_misc.o
+ .debug_frame   0x00000000000003b4      0x344 ./System/Src/gd32f4xx/gd32f4xx_rcu.o
+ .debug_frame   0x00000000000006f8      0x2b0 ./System/Src/gd32f4xx/gd32f4xx_spi.o
+ .debug_frame   0x00000000000009a8      0x500 ./System/Src/gd32f4xx/gd32f4xx_timer.o
+ .debug_frame   0x0000000000000ea8       0x64 ./System/Src/diag/trace-impl.o
+ .debug_frame   0x0000000000000f0c       0x94 ./System/Src/diag/trace.o
+ .debug_frame   0x0000000000000fa0      0x158 ./System/Src/cortexm/exception-handlers.o
+ .debug_frame   0x00000000000010f8       0x40 ./System/Src/cortexm/initialize-hardware.o
+ .debug_frame   0x0000000000001138       0x70 ./System/Src/CMSIS/system_gd32f4xx.o
+ .debug_frame   0x00000000000011a8       0x20 ./System/Src/CMSIS/vectors_gd32f4xx.o
+ .debug_frame   0x00000000000011c8      0x2bc ./Src/ILI9341_GFX.o
+ .debug_frame   0x0000000000001484       0xb0 ./Src/main.o
+ .debug_frame   0x0000000000001534       0x58 ./Src/timer.o
+ .debug_frame   0x000000000000158c       0x20 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x00000000000015ac       0x28 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x00000000000015d4       0x94 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_float.o)
+ .debug_frame   0x0000000000001668       0x60 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x00000000000016c8       0x40 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-vfscanf_float.o)
+ .debug_frame   0x0000000000001708       0x20 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sf_nan.o)
+ .debug_frame   0x0000000000001728       0x6c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sprintf.o)
+ .debug_frame   0x0000000000001794       0xe8 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtod.o)
+ .debug_frame   0x000000000000187c       0x64 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strtol.o)
+ .debug_frame   0x00000000000018e0       0x4c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-vsnprintf.o)
+ .debug_frame   0x000000000000192c       0x6c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-dtoa.o)
+ .debug_frame   0x0000000000001998       0x70 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gdtoa-gethex.o)
+ .debug_frame   0x0000000000001a08       0x74 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-gdtoa-hexnan.o)
+ .debug_frame   0x0000000000001a7c       0x20 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lnumeric.o)
+ .debug_frame   0x0000000000001a9c       0x48 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-locale.o)
+ .debug_frame   0x0000000000001ae4       0x40 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-localeconv.o)
+ .debug_frame   0x0000000000001b24       0x30 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-malloc.o)
+ .debug_frame   0x0000000000001b54       0x48 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mbtowc_r.o)
+ .debug_frame   0x0000000000001b9c      0x248 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mprec.o)
+ .debug_frame   0x0000000000001de4       0x2c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-callocr.o)
+ .debug_frame   0x0000000000001e10       0x38 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x0000000000001e48       0x30 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x0000000000001e78       0x90 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
+ .debug_frame   0x0000000000001f08       0x20 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-s_nan.o)
+ .debug_frame   0x0000000000001f28       0x2c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000000000001f54       0x28 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-strncmp.o)
+ .debug_frame   0x0000000000001f7c       0x3c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-wctomb_r.o)
+ .debug_frame   0x0000000000001fb8       0x28 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memmove.o)
+ .debug_frame   0x0000000000001fe0       0x20 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x0000000000002000       0x30 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-mlock.o)
+ .debug_frame   0x0000000000002030       0x3c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x000000000000206c       0xb0 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-lock.o)
+ .debug_frame   0x000000000000211c       0x20 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x000000000000213c       0xac c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x00000000000021e8       0x50 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x0000000000002238       0xc4 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_cmpdf2.o)
+ .debug_frame   0x00000000000022fc       0x20 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_unorddf2.o)
+ .debug_frame   0x000000000000231c       0x24 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixdfsi.o)
+ .debug_frame   0x0000000000002340       0x24 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixunsdfsi.o)
+ .debug_frame   0x0000000000002364       0x24 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_truncdfsf2.o)
+ .debug_frame   0x0000000000002388       0x38 c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_fixdfdi.o)
+ .debug_frame   0x00000000000023c0       0x2c c:/users/kovalev/appdata/roaming/xpacks/@gnu-mcu-eclipse/arm-none-eabi-gcc/8.2.1-1.7.1/.content/bin/../lib/gcc/arm-none-eabi/8.2.1/thumb/v7e-m/nofp\libgcc.a(_fixunsdfdi.o)
 
-.debug_str      0x0000000000000000    0x336f3
+.debug_str      0x0000000000000000    0x3446b
  *(.debug_str)
- .debug_str     0x0000000000000000     0x7c9a ./System/Src/newlib/exit.o
+ .debug_str     0x0000000000000000     0x7c94 ./System/Src/newlib/exit.o
                                        0x7e6c (size before relaxing)
- .debug_str     0x0000000000007c9a      0x4f4 ./System/Src/newlib/sbrk.o
+ .debug_str     0x0000000000007c94      0x4f4 ./System/Src/newlib/sbrk.o
                                        0x721e (size before relaxing)
- .debug_str     0x000000000000818e      0xbb3 ./System/Src/newlib/startup.o
+ .debug_str     0x0000000000008188      0xbb3 ./System/Src/newlib/startup.o
                                        0x6959 (size before relaxing)
- .debug_str     0x0000000000008d41      0xdee ./System/Src/newlib/syscalls.o
+ .debug_str     0x0000000000008d3b      0xdee ./System/Src/newlib/syscalls.o
                                        0x806a (size before relaxing)
- .debug_str     0x0000000000009b2f    0x2664a ./System/Src/gd32f4xx/gd32f4xx_gpio.o
+ .debug_str     0x0000000000009b29    0x2664a ./System/Src/gd32f4xx/gd32f4xx_gpio.o
                                       0x29ede (size before relaxing)
- .debug_str     0x0000000000030179     0x126a ./System/Src/gd32f4xx/gd32f4xx_rcu.o
+ .debug_str     0x0000000000030173      0x14e ./System/Src/gd32f4xx/gd32f4xx_it.o
+                                      0x29b81 (size before relaxing)
+ .debug_str     0x00000000000302c1      0x221 ./System/Src/gd32f4xx/gd32f4xx_misc.o
+                                      0x29c21 (size before relaxing)
+ .debug_str     0x00000000000304e2     0x126a ./System/Src/gd32f4xx/gd32f4xx_rcu.o
                                       0x2afd4 (size before relaxing)
- .debug_str     0x00000000000313e3      0x4ec ./System/Src/gd32f4xx/gd32f4xx_spi.o
+ .debug_str     0x000000000003174c      0x4ec ./System/Src/gd32f4xx/gd32f4xx_spi.o
                                       0x2a2ea (size before relaxing)
- .debug_str     0x00000000000318cf      0x379 ./System/Src/diag/trace-impl.o
+ .debug_str     0x0000000000031c38      0xb7a ./System/Src/gd32f4xx/gd32f4xx_timer.o
+                                      0x2a917 (size before relaxing)
+ .debug_str     0x00000000000327b2      0x379 ./System/Src/diag/trace-impl.o
                                       0x2dc0e (size before relaxing)
- .debug_str     0x0000000000031c48      0x813 ./System/Src/diag/trace.o
+ .debug_str     0x0000000000032b2b      0x813 ./System/Src/diag/trace.o
                                        0x85e5 (size before relaxing)
- .debug_str     0x000000000003245b      0x1fb ./System/Src/cortexm/exception-handlers.o
+ .debug_str     0x000000000003333e      0x11d ./System/Src/cortexm/exception-handlers.o
                                       0x2ee33 (size before relaxing)
- .debug_str     0x0000000000032656       0x5d ./System/Src/cortexm/initialize-hardware.o
+ .debug_str     0x000000000003345b       0x5d ./System/Src/cortexm/initialize-hardware.o
                                       0x29af1 (size before relaxing)
- .debug_str     0x00000000000326b3      0x1cc ./System/Src/CMSIS/system_gd32f4xx.o
+ .debug_str     0x00000000000334b8      0x199 ./System/Src/CMSIS/system_gd32f4xx.o
                                       0x29c1e (size before relaxing)
- .debug_str     0x000000000003287f       0x56 ./System/Src/CMSIS/vectors_gd32f4xx.o
+ .debug_str     0x0000000000033651       0x56 ./System/Src/CMSIS/vectors_gd32f4xx.o
                                        0x38ed (size before relaxing)
- .debug_str     0x00000000000328d5      0x768 ./Src/ILI9341_GFX.o
-                                      0x2d547 (size before relaxing)
- .debug_str     0x000000000003303d       0xde ./Src/main.o
-                                      0x2e9db (size before relaxing)
- .debug_str     0x000000000003311b      0x5d8 ./Src/timer.o
+ .debug_str     0x00000000000336a7      0x765 ./Src/ILI9341_GFX.o
+                                      0x2d54f (size before relaxing)
+ .debug_str     0x0000000000033e0c      0x615 ./Src/main.o
+                                      0x2f01f (size before relaxing)
+ .debug_str     0x0000000000034421       0x4a ./Src/timer.o
                                       0x2a124 (size before relaxing)
 
-.debug_loc      0x0000000000000000     0x3673
+.debug_loc      0x0000000000000000     0x4981
  *(.debug_loc)
  .debug_loc     0x0000000000000000       0x15 ./System/Src/newlib/exit.o
  .debug_loc     0x0000000000000015       0x97 ./System/Src/newlib/sbrk.o
  .debug_loc     0x00000000000000ac      0x2a6 ./System/Src/newlib/startup.o
  .debug_loc     0x0000000000000352       0x6f ./System/Src/newlib/syscalls.o
  .debug_loc     0x00000000000003c1      0x3ba ./System/Src/gd32f4xx/gd32f4xx_gpio.o
- .debug_loc     0x000000000000077b      0xf45 ./System/Src/gd32f4xx/gd32f4xx_rcu.o
- .debug_loc     0x00000000000016c0      0x667 ./System/Src/gd32f4xx/gd32f4xx_spi.o
- .debug_loc     0x0000000000001d27      0x1a1 ./System/Src/diag/trace-impl.o
- .debug_loc     0x0000000000001ec8      0x118 ./System/Src/diag/trace.o
- .debug_loc     0x0000000000001fe0      0x35c ./System/Src/cortexm/exception-handlers.o
- .debug_loc     0x000000000000233c      0x13f ./System/Src/CMSIS/system_gd32f4xx.o
- .debug_loc     0x000000000000247b     0x114b ./Src/ILI9341_GFX.o
- .debug_loc     0x00000000000035c6       0x4a ./Src/main.o
- .debug_loc     0x0000000000003610       0x63 ./Src/timer.o
+ .debug_loc     0x000000000000077b       0x7c ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_loc     0x00000000000007f7      0x2e5 ./System/Src/gd32f4xx/gd32f4xx_misc.o
+ .debug_loc     0x0000000000000adc      0xf45 ./System/Src/gd32f4xx/gd32f4xx_rcu.o
+ .debug_loc     0x0000000000001a21      0x667 ./System/Src/gd32f4xx/gd32f4xx_spi.o
+ .debug_loc     0x0000000000002088      0xfad ./System/Src/gd32f4xx/gd32f4xx_timer.o
+ .debug_loc     0x0000000000003035      0x1a1 ./System/Src/diag/trace-impl.o
+ .debug_loc     0x00000000000031d6      0x118 ./System/Src/diag/trace.o
+ .debug_loc     0x00000000000032ee      0x35c ./System/Src/cortexm/exception-handlers.o
+ .debug_loc     0x000000000000364a      0x13f ./System/Src/CMSIS/system_gd32f4xx.o
+ .debug_loc     0x0000000000003789     0x114b ./Src/ILI9341_GFX.o
+ .debug_loc     0x00000000000048d4       0x4a ./Src/main.o
+ .debug_loc     0x000000000000491e       0x63 ./Src/timer.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -7629,25 +7768,28 @@ END GROUP
  *(.debug_varnames)
 OUTPUT(gd32f405_template.elf elf32-littlearm)
 
-.debug_ranges   0x0000000000000000      0x618
+.debug_ranges   0x0000000000000000      0x908
  .debug_ranges  0x0000000000000000       0x18 ./System/Src/newlib/exit.o
  .debug_ranges  0x0000000000000018       0x10 ./System/Src/newlib/sbrk.o
  .debug_ranges  0x0000000000000028       0x48 ./System/Src/newlib/startup.o
  .debug_ranges  0x0000000000000070       0x20 ./System/Src/newlib/syscalls.o
  .debug_ranges  0x0000000000000090       0x80 ./System/Src/gd32f4xx/gd32f4xx_gpio.o
- .debug_ranges  0x0000000000000110      0x180 ./System/Src/gd32f4xx/gd32f4xx_rcu.o
- .debug_ranges  0x0000000000000290      0x140 ./System/Src/gd32f4xx/gd32f4xx_spi.o
- .debug_ranges  0x00000000000003d0       0x38 ./System/Src/diag/trace-impl.o
- .debug_ranges  0x0000000000000408       0x28 ./System/Src/diag/trace.o
- .debug_ranges  0x0000000000000430       0x98 ./System/Src/cortexm/exception-handlers.o
- .debug_ranges  0x00000000000004c8       0x18 ./System/Src/cortexm/initialize-hardware.o
- .debug_ranges  0x00000000000004e0       0x28 ./System/Src/CMSIS/system_gd32f4xx.o
- .debug_ranges  0x0000000000000508       0x10 ./System/Src/CMSIS/vectors_gd32f4xx.o
- .debug_ranges  0x0000000000000518       0xb0 ./Src/ILI9341_GFX.o
- .debug_ranges  0x00000000000005c8       0x28 ./Src/main.o
- .debug_ranges  0x00000000000005f0       0x28 ./Src/timer.o
+ .debug_ranges  0x0000000000000110       0x58 ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_ranges  0x0000000000000168       0x40 ./System/Src/gd32f4xx/gd32f4xx_misc.o
+ .debug_ranges  0x00000000000001a8      0x180 ./System/Src/gd32f4xx/gd32f4xx_rcu.o
+ .debug_ranges  0x0000000000000328      0x140 ./System/Src/gd32f4xx/gd32f4xx_spi.o
+ .debug_ranges  0x0000000000000468      0x248 ./System/Src/gd32f4xx/gd32f4xx_timer.o
+ .debug_ranges  0x00000000000006b0       0x38 ./System/Src/diag/trace-impl.o
+ .debug_ranges  0x00000000000006e8       0x28 ./System/Src/diag/trace.o
+ .debug_ranges  0x0000000000000710       0x98 ./System/Src/cortexm/exception-handlers.o
+ .debug_ranges  0x00000000000007a8       0x18 ./System/Src/cortexm/initialize-hardware.o
+ .debug_ranges  0x00000000000007c0       0x28 ./System/Src/CMSIS/system_gd32f4xx.o
+ .debug_ranges  0x00000000000007e8       0x10 ./System/Src/CMSIS/vectors_gd32f4xx.o
+ .debug_ranges  0x00000000000007f8       0xb0 ./Src/ILI9341_GFX.o
+ .debug_ranges  0x00000000000008a8       0x38 ./Src/main.o
+ .debug_ranges  0x00000000000008e0       0x28 ./Src/timer.o
 
-.debug_macro    0x0000000000000000     0x3bcc
+.debug_macro    0x0000000000000000     0x4497
  .debug_macro   0x0000000000000000      0x1b4 ./System/Src/newlib/exit.o
  .debug_macro   0x00000000000001b4      0x169 ./System/Src/newlib/sbrk.o
  .debug_macro   0x000000000000031d      0x174 ./System/Src/newlib/sbrk.o
@@ -7666,29 +7808,33 @@ OUTPUT(gd32f405_template.elf elf32-littlearm)
  .debug_macro   0x0000000000000d79      0x189 ./System/Src/newlib/syscalls.o
  .debug_macro   0x0000000000000f02       0x16 ./System/Src/newlib/syscalls.o
  .debug_macro   0x0000000000000f18      0x2e1 ./System/Src/gd32f4xx/gd32f4xx_gpio.o
- .debug_macro   0x00000000000011f9      0x30b ./System/Src/gd32f4xx/gd32f4xx_rcu.o
- .debug_macro   0x0000000000001504      0x2f9 ./System/Src/gd32f4xx/gd32f4xx_spi.o
- .debug_macro   0x00000000000017fd      0x460 ./System/Src/diag/trace-impl.o
- .debug_macro   0x0000000000001c5d       0x10 ./System/Src/diag/trace-impl.o
- .debug_macro   0x0000000000001c6d       0xcf ./System/Src/diag/trace-impl.o
- .debug_macro   0x0000000000001d3c       0xbe ./System/Src/diag/trace-impl.o
- .debug_macro   0x0000000000001dfa       0x22 ./System/Src/diag/trace-impl.o
- .debug_macro   0x0000000000001e1c      0x1fb ./System/Src/diag/trace.o
- .debug_macro   0x0000000000002017       0x16 ./System/Src/diag/trace.o
- .debug_macro   0x000000000000202d       0x97 ./System/Src/diag/trace.o
- .debug_macro   0x00000000000020c4       0xfd ./System/Src/diag/trace.o
- .debug_macro   0x00000000000021c1       0x10 ./System/Src/diag/trace.o
- .debug_macro   0x00000000000021d1       0x16 ./System/Src/diag/trace.o
- .debug_macro   0x00000000000021e7      0x16f ./System/Src/diag/trace.o
- .debug_macro   0x0000000000002356       0x4c ./System/Src/diag/trace.o
- .debug_macro   0x00000000000023a2       0x16 ./System/Src/diag/trace.o
- .debug_macro   0x00000000000023b8      0x4af ./System/Src/cortexm/exception-handlers.o
- .debug_macro   0x0000000000002867       0x10 ./System/Src/cortexm/exception-handlers.o
- .debug_macro   0x0000000000002877      0x2f1 ./System/Src/cortexm/initialize-hardware.o
- .debug_macro   0x0000000000002b68      0x317 ./System/Src/CMSIS/system_gd32f4xx.o
- .debug_macro   0x0000000000002e7f       0x34 ./System/Src/CMSIS/vectors_gd32f4xx.o
- .debug_macro   0x0000000000002eb3      0x40e ./Src/ILI9341_GFX.o
- .debug_macro   0x00000000000032c1       0xee ./Src/ILI9341_GFX.o
- .debug_macro   0x00000000000033af      0x503 ./Src/main.o
- .debug_macro   0x00000000000038b2      0x30a ./Src/timer.o
- .debug_macro   0x0000000000003bbc       0x10 ./Src/timer.o
+ .debug_macro   0x00000000000011f9      0x2fb ./System/Src/gd32f4xx/gd32f4xx_it.o
+ .debug_macro   0x00000000000014f4      0x2e1 ./System/Src/gd32f4xx/gd32f4xx_misc.o
+ .debug_macro   0x00000000000017d5      0x30b ./System/Src/gd32f4xx/gd32f4xx_rcu.o
+ .debug_macro   0x0000000000001ae0      0x2f9 ./System/Src/gd32f4xx/gd32f4xx_spi.o
+ .debug_macro   0x0000000000001dd9      0x2e1 ./System/Src/gd32f4xx/gd32f4xx_timer.o
+ .debug_macro   0x00000000000020ba      0x460 ./System/Src/diag/trace-impl.o
+ .debug_macro   0x000000000000251a       0x10 ./System/Src/diag/trace-impl.o
+ .debug_macro   0x000000000000252a       0xcf ./System/Src/diag/trace-impl.o
+ .debug_macro   0x00000000000025f9       0xbe ./System/Src/diag/trace-impl.o
+ .debug_macro   0x00000000000026b7       0x22 ./System/Src/diag/trace-impl.o
+ .debug_macro   0x00000000000026d9      0x1fb ./System/Src/diag/trace.o
+ .debug_macro   0x00000000000028d4       0x16 ./System/Src/diag/trace.o
+ .debug_macro   0x00000000000028ea       0x97 ./System/Src/diag/trace.o
+ .debug_macro   0x0000000000002981       0xfd ./System/Src/diag/trace.o
+ .debug_macro   0x0000000000002a7e       0x10 ./System/Src/diag/trace.o
+ .debug_macro   0x0000000000002a8e       0x16 ./System/Src/diag/trace.o
+ .debug_macro   0x0000000000002aa4      0x16f ./System/Src/diag/trace.o
+ .debug_macro   0x0000000000002c13       0x4c ./System/Src/diag/trace.o
+ .debug_macro   0x0000000000002c5f       0x16 ./System/Src/diag/trace.o
+ .debug_macro   0x0000000000002c75      0x4af ./System/Src/cortexm/exception-handlers.o
+ .debug_macro   0x0000000000003124       0x10 ./System/Src/cortexm/exception-handlers.o
+ .debug_macro   0x0000000000003134      0x2f1 ./System/Src/cortexm/initialize-hardware.o
+ .debug_macro   0x0000000000003425      0x317 ./System/Src/CMSIS/system_gd32f4xx.o
+ .debug_macro   0x000000000000373c       0x34 ./System/Src/CMSIS/vectors_gd32f4xx.o
+ .debug_macro   0x0000000000003770      0x40d ./Src/ILI9341_GFX.o
+ .debug_macro   0x0000000000003b7d       0x10 ./Src/ILI9341_GFX.o
+ .debug_macro   0x0000000000003b8d       0xee ./Src/ILI9341_GFX.o
+ .debug_macro   0x0000000000003c7b      0x502 ./Src/main.o
+ .debug_macro   0x000000000000417d      0x30a ./Src/timer.o
+ .debug_macro   0x0000000000004487       0x10 ./Src/timer.o

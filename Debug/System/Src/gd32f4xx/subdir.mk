@@ -21,6 +21,7 @@ C_SRCS += \
 ../System/Src/gd32f4xx/gd32f4xx_i2c.c \
 ../System/Src/gd32f4xx/gd32f4xx_ipa.c \
 ../System/Src/gd32f4xx/gd32f4xx_iref.c \
+../System/Src/gd32f4xx/gd32f4xx_it.c \
 ../System/Src/gd32f4xx/gd32f4xx_misc.c \
 ../System/Src/gd32f4xx/gd32f4xx_pmu.c \
 ../System/Src/gd32f4xx/gd32f4xx_rcu.c \
@@ -52,6 +53,7 @@ OBJS += \
 ./System/Src/gd32f4xx/gd32f4xx_i2c.o \
 ./System/Src/gd32f4xx/gd32f4xx_ipa.o \
 ./System/Src/gd32f4xx/gd32f4xx_iref.o \
+./System/Src/gd32f4xx/gd32f4xx_it.o \
 ./System/Src/gd32f4xx/gd32f4xx_misc.o \
 ./System/Src/gd32f4xx/gd32f4xx_pmu.o \
 ./System/Src/gd32f4xx/gd32f4xx_rcu.o \
@@ -83,6 +85,7 @@ C_DEPS += \
 ./System/Src/gd32f4xx/gd32f4xx_i2c.d \
 ./System/Src/gd32f4xx/gd32f4xx_ipa.d \
 ./System/Src/gd32f4xx/gd32f4xx_iref.d \
+./System/Src/gd32f4xx/gd32f4xx_it.d \
 ./System/Src/gd32f4xx/gd32f4xx_misc.d \
 ./System/Src/gd32f4xx/gd32f4xx_pmu.d \
 ./System/Src/gd32f4xx/gd32f4xx_rcu.d \
