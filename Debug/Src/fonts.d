@@ -1,4 +1,4 @@
-Src/fonts.o: ../Src/fonts.c ../Inc/fonts.h ../Inc/main.h \
+Src/fonts.o: ../Src/fonts.c ../Inc/ILI9341_GFX.h ../Inc/main.h \
  ../System/Inc/CMSIS/gd32f4xx_libopt.h \
  ../System/Inc/gd32f4xx/gd32f4xx_rcu.h ../System/Inc/CMSIS/gd32f4xx.h \
  ../System/Inc/CMSIS/core_cm4.h ../System/Inc/CMSIS/core_cmInstr.h \
@@ -29,9 +29,9 @@ Src/fonts.o: ../Src/fonts.c ../Inc/fonts.h ../Inc/main.h \
  ../System/Inc/gd32f4xx/gd32f4xx_usart.h \
  ../System/Inc/gd32f4xx/gd32f4xx_wwdgt.h \
  ../System/Inc/gd32f4xx/gd32f4xx_misc.h ../Inc/systick.h \
- ../Inc/ILI9341_GFX.h ../Inc/fonts.h
+ ../Inc/ILI9341_GFX.h ../Inc/fonts.h ../Inc/fonts.h
 
-../Inc/fonts.h:
+../Inc/ILI9341_GFX.h:
 
 ../Inc/main.h:
 
@@ -104,5 +104,7 @@ Src/fonts.o: ../Src/fonts.c ../Inc/fonts.h ../Inc/main.h \
 ../Inc/systick.h:
 
 ../Inc/ILI9341_GFX.h:
+
+../Inc/fonts.h:
 
 ../Inc/fonts.h:

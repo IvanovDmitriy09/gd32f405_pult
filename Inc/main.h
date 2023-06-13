@@ -34,8 +34,7 @@ extern "C" {
 #include "systick.h"
 
 #include "ILI9341_GFX.h"
-//#include "fonts.h"
-//#include "img.h"
+#include "fonts.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 

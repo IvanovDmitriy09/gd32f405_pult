@@ -1,4 +1,5 @@
 /* vim: set ai et ts=4 sw=4: */
+#include "ILI9341_GFX.h"
 #include "fonts.h"
 
 static const uint16_t Font7x10 [] = {

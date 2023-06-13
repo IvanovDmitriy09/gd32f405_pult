@@ -47,8 +47,8 @@
 #define MAROON      0x7800 //0x000F
 #define PURPLE      0x780F //0x780F
 #define OLIVE       0x7BE0 //0x03EF
-#define LIGHTGREY   0xC618 //
-#define DARKGREY    0x7BEF //
+#define LIGHTGREY   0xBDF7
+#define DARKGREY    0x8410
 #define BLUE        0x001F //0xF800
 #define GREEN       0x07E0 //0x07E0
 #define CYAN        0x07FF //0xFFE0
@@ -68,8 +68,8 @@
 #define MAROON      0x000F
 #define PURPLE      0x780F
 #define OLIVE       0x03EF
-#define LIGHTGREY   0xC618 //
-#define DARKGREY    0x7BEF //
+#define LIGHTGREY   0xBDF7
+#define DARKGREY    0x8410
 #define BLUE        0xF800
 #define GREEN       0x07E0
 #define CYAN        0xFFE0
@@ -80,6 +80,7 @@
 #define ORANGE      0x053F
 #define GREENYELLOW 0x2FF5
 #define PINK        0xF81F
+#define TRANSPARENT 0xFFFE
 #endif
 
 /////////////////////////////////////////////////////////
@@ -129,7 +130,7 @@ void ILI9341_Draw_Image(const char *image_array, uint16_t x_coordinat,
 		uint16_t y_coordinat, uint16_t img_width, uint16_t img_height,
 		uint32_t s_img);
 
-//void ILI9341_WriteString(uint16_t x, uint16_t y, const char* str, FontDef font, uint16_t color, uint16_t bgcolor);
+void ILI9341_WriteString(uint16_t x, uint16_t y, const char* str, FontDef font, uint16_t color, uint16_t bgcolor);
 
 void ILI9341_Random_line(int16_t x1, int16_t y1, int16_t x2, int16_t y2,
 		uint16_t color);

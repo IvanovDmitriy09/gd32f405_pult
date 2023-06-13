@@ -164,7 +164,7 @@ void turn_on_line(uint8_t out) {
 			out_symbol = 2;
 		} else if (RESET == gpio_input_bit_get(GPIOB, GPIO_PIN_4)) {
 			out_symbol = 3;
-		}
+		} else out_symbol = 11;
 		break;
 	case 2:
 		gpio_bit_set(GPIOB, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7);
@@ -175,7 +175,7 @@ void turn_on_line(uint8_t out) {
 			out_symbol = 5;
 		} else if (RESET == gpio_input_bit_get(GPIOB, GPIO_PIN_4)) {
 			out_symbol = 6;
-		}
+		} else out_symbol = 22;
 		break;
 	case 3:
 		gpio_bit_set(GPIOB, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7);
@@ -186,7 +186,7 @@ void turn_on_line(uint8_t out) {
 			out_symbol = 8;
 		} else if (RESET == gpio_input_bit_get(GPIOB, GPIO_PIN_4)) {
 			out_symbol = 9;
-		}
+		} else out_symbol = 33;
 		break;
 	}
 
