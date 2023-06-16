@@ -47,10 +47,12 @@ void nvic_config(void);
 void bat_level(uint8_t lvl, uint16_t x, uint16_t y);
 void radio_level(uint8_t lvl, uint16_t x, uint16_t y);
 
-extern uint8_t out_symbol;
+extern uint8_t out_symbol1;
+extern uint8_t out_symbol2;
+extern uint8_t out_symbol3;
 extern FontDef Font_11x18;
 
-uint8_t p;
+uint8_t p1, p2, p3;
 
 // ----------------------------------------------------------------------------
 //
@@ -100,81 +102,104 @@ int main(int argc, char *argv[]) {
 	ILI9341_Fill_Screen(ORANGE);
 
 	ILI9341_Draw_Filled_Rectangle_Coord(0, 0, 320, 30, DARKGREY);
+	ILI9341_Draw_Filled_Rectangle_Coord(0, 208, 320, 240, DARKGREY);
 
 	uint32_t size_img = sizeof(img_logo);
 
 //	gpio_bit_reset(GPIOB, GPIO_PIN_5);
 //	gpio_bit_reset(GPIOB, GPIO_PIN_6);
 //	gpio_bit_reset(GPIOB, GPIO_PIN_7);
-	ILI9341_Draw_Image(img_logo, 0, 210, 71, 30, size_img);
+	ILI9341_Draw_Image(img_logo1, 0, 210, 71, 30, size_img);
 	ILI9341_WriteString(14, 216, "LAST", Font_11x18, BLACK, TRANSPARENT);
-	ILI9341_Draw_Image(img_logo, 124, 210, 71, 30, size_img);
+	ILI9341_Draw_Image(img_logo1, 124, 210, 71, 30, size_img);
 	ILI9341_WriteString(138, 216, "MENU", Font_11x18, BLACK, TRANSPARENT);
-	ILI9341_Draw_Image(img_logo, 249, 210, 71, 30, size_img);
+	ILI9341_Draw_Image(img_logo1, 249, 210, 71, 30, size_img);
 	ILI9341_WriteString(263, 216, "NEXT", Font_11x18, BLACK, TRANSPARENT);
-
+	bat_level(83, 42, 7);
+	radio_level(45, 1, 5);
 	while (1) {
 
-		if (p != out_symbol) {
-			switch (out_symbol) {
-			case 11:
-				ILI9341_Draw_Image(img_logo1, 0, 210, 71, 30, size_img);
-				ILI9341_WriteString(14, 216, "LAST", Font_11x18, BLACK,
-				TRANSPARENT);
-				break;
-			case 22:
-				ILI9341_Draw_Image(img_logo1, 124, 210, 71, 30, size_img);
-				ILI9341_WriteString(138, 216, "MENU", Font_11x18, BLACK,
-				TRANSPARENT);
-				break;
-			case 33:
-				ILI9341_Draw_Image(img_logo1, 249, 210, 71, 30, size_img);
-				ILI9341_WriteString(263, 216, "NEXT", Font_11x18, BLACK,
-				TRANSPARENT);
-				break;
+		if (p1 != out_symbol1) {
+			switch (out_symbol1) {
 			case 1:
 				ILI9341_Draw_Image(img_logo, 0, 210, 71, 30, size_img);
 				ILI9341_WriteString(14, 216, "LAST", Font_11x18, BLACK,
 				TRANSPARENT);
 				break;
 			case 2:
-				//ILI9341_Fill_Screen(BLUE);
+//				ILI9341_Draw_Image(img_logo1, 124, 210, 71, 30, size_img);
+//				ILI9341_WriteString(138, 216, "MENU", Font_11x18, BLACK,
+//				TRANSPARENT);
 				break;
 			case 3:
-				//ILI9341_Fill_Screen(PINK);
+//				ILI9341_Draw_Image(img_logo1, 249, 210, 71, 30, size_img);
+//				ILI9341_WriteString(263, 216, "NEXT", Font_11x18, BLACK,
+//				TRANSPARENT);
 				break;
+			case 0:
+				ILI9341_Draw_Image(img_logo1, 0, 210, 71, 30, size_img);
+				ILI9341_WriteString(14, 216, "LAST", Font_11x18, BLACK,
+				TRANSPARENT);
+				break;
+			}
+			p1 = out_symbol1;
+		}
+		if (p2 != out_symbol2) {
+			switch (out_symbol2) {
 			case 4:
-				//ILI9341_Fill_Screen(ORANGE);
+//				ILI9341_Draw_Image(img_logo1, 0, 210, 71, 30, size_img);
+//				ILI9341_WriteString(14, 216, "LAST", Font_11x18, BLACK,
+//				TRANSPARENT);
 				break;
 			case 5:
 				ILI9341_Draw_Image(img_logo, 124, 210, 71, 30, size_img);
 				ILI9341_WriteString(138, 216, "MENU", Font_11x18, BLACK,
 				TRANSPARENT);
 				break;
-				//ILI9341_Fill_Screen(GREEN);
-				break;
 			case 6:
-				//ILI9341_Fill_Screen(YELLOW);
+//				ILI9341_Draw_Image(img_logo1, 249, 210, 71, 30, size_img);
+//				ILI9341_WriteString(263, 216, "NEXT", Font_11x18, BLACK,
+//				TRANSPARENT);
 				break;
+			case 0:
+				ILI9341_Draw_Image(img_logo1, 124, 210, 71, 30, size_img);
+				ILI9341_WriteString(138, 216, "MENU", Font_11x18, BLACK,
+				TRANSPARENT);
+				break;
+			}
+			p2 = out_symbol2;
+		}
+		if (p3 != out_symbol3) {
+			switch (out_symbol3) {
 			case 7:
 				ILI9341_Draw_Image(img_logo, 249, 210, 71, 30, size_img);
 				ILI9341_WriteString(263, 216, "NEXT", Font_11x18, BLACK,
 				TRANSPARENT);
 				break;
 			case 8:
-				//ILI9341_Fill_Screen(NAVY);
+//				ILI9341_Draw_Image(img_logo1, 124, 210, 71, 30, size_img);
+//				ILI9341_WriteString(138, 216, "MENU", Font_11x18, BLACK,
+//				TRANSPARENT);
 				break;
 			case 9:
-				//ILI9341_Fill_Screen(MAGENTA);
+//				ILI9341_Draw_Image(img_logo1, 249, 210, 71, 30, size_img);
+//				ILI9341_WriteString(263, 216, "NEXT", Font_11x18, BLACK,
+//				TRANSPARENT);
+				break;
+			case 0:
+				ILI9341_Draw_Image(img_logo1, 249, 210, 71, 30, size_img);
+				ILI9341_WriteString(263, 216, "NEXT", Font_11x18, BLACK,
+				TRANSPARENT);
 				break;
 			}
-			p = out_symbol;
+			p3 = out_symbol3;
 		}
-		for (uint8_t i = 100; i > 0; i--) {
-			bat_level(i, 42, 7);
-			radio_level(i, 1, 5);
-			timer_sleep(100);
-		}
+
+//		for (uint8_t i = 100; i > 0; i--) {
+//			bat_level(i, 42, 7);
+//			radio_level(i, 1, 5);
+//			timer_sleep(100);
+//		}
 
 //		ILI9341_Draw_Image(img_logo, 0, 210, 71, 30, size_img);
 //		ILI9341_Draw_Image(img_logo, 249, 210, 71, 30, size_img);
@@ -285,51 +310,51 @@ void timer_config(void) {
 
 void bat_level(uint8_t lvl, uint16_t x, uint16_t y) {
 
-	ILI9341_Draw_Vertical_Line(x, y+1, 14, BLACK);
-	ILI9341_Draw_Horizontal_Line(x+1, y, 24, BLACK);
-	ILI9341_Draw_Vertical_Line(x+25, y+1, 14, BLACK);
-	ILI9341_Draw_Horizontal_Line(x+1, y+15, 24, BLACK);
+	ILI9341_Draw_Vertical_Line(x, y + 1, 14, BLACK);
+	ILI9341_Draw_Horizontal_Line(x + 1, y, 24, BLACK);
+	ILI9341_Draw_Vertical_Line(x + 25, y + 1, 14, BLACK);
+	ILI9341_Draw_Horizontal_Line(x + 1, y + 15, 24, BLACK);
 
-	ILI9341_Draw_Vertical_Line(x+5, y+1, 14, BLACK);
-	ILI9341_Draw_Vertical_Line(x+10, y+1, 14, BLACK);
-	ILI9341_Draw_Vertical_Line(x+15, y+1, 14, BLACK);
-	ILI9341_Draw_Vertical_Line(x+20, y+1, 14, BLACK);
+	ILI9341_Draw_Vertical_Line(x + 5, y + 1, 14, BLACK);
+	ILI9341_Draw_Vertical_Line(x + 10, y + 1, 14, BLACK);
+	ILI9341_Draw_Vertical_Line(x + 15, y + 1, 14, BLACK);
+	ILI9341_Draw_Vertical_Line(x + 20, y + 1, 14, BLACK);
 
-	ILI9341_Draw_Horizontal_Line(x+26, y+5, 2, BLACK);
-	ILI9341_Draw_Vertical_Line(x+26, y+6, 4, DARKGREY);
-	ILI9341_Draw_Vertical_Line(x+27, y+6, 4, BLACK);
-	ILI9341_Draw_Horizontal_Line(x+26, y+10, 2, BLACK);
+	ILI9341_Draw_Horizontal_Line(x + 26, y + 5, 2, BLACK);
+	ILI9341_Draw_Vertical_Line(x + 26, y + 6, 4, DARKGREY);
+	ILI9341_Draw_Vertical_Line(x + 27, y + 6, 4, BLACK);
+	ILI9341_Draw_Horizontal_Line(x + 26, y + 10, 2, BLACK);
 
 	if (lvl < 20) {
-		ILI9341_Draw_Rectangle(x+1, y+1, 4, 14, RED);
-		ILI9341_Draw_Rectangle(x+6, y+1, 4, 14, LIGHTGREY);
-		ILI9341_Draw_Rectangle(x+11, y+1, 4, 14, LIGHTGREY);
-		ILI9341_Draw_Rectangle(x+16, y+1, 4, 14, LIGHTGREY);
-		ILI9341_Draw_Rectangle(x+21, y+1, 4, 14, LIGHTGREY);
+		ILI9341_Draw_Rectangle(x + 1, y + 1, 4, 14, RED);
+		ILI9341_Draw_Rectangle(x + 6, y + 1, 4, 14, LIGHTGREY);
+		ILI9341_Draw_Rectangle(x + 11, y + 1, 4, 14, LIGHTGREY);
+		ILI9341_Draw_Rectangle(x + 16, y + 1, 4, 14, LIGHTGREY);
+		ILI9341_Draw_Rectangle(x + 21, y + 1, 4, 14, LIGHTGREY);
 	} else if (lvl > 20 && lvl < 40) {
-		ILI9341_Draw_Rectangle(x+1, y+1, 4, 14, ORANGE);
-		ILI9341_Draw_Rectangle(x+6, y+1, 4, 14, ORANGE);
-		ILI9341_Draw_Rectangle(x+11, y+1, 4, 14, LIGHTGREY);
-		ILI9341_Draw_Rectangle(x+16, y+1, 4, 14, LIGHTGREY);
-		ILI9341_Draw_Rectangle(x+21, y+1, 4, 14, LIGHTGREY);
+		ILI9341_Draw_Rectangle(x + 1, y + 1, 4, 14, ORANGE);
+		ILI9341_Draw_Rectangle(x + 6, y + 1, 4, 14, ORANGE);
+		ILI9341_Draw_Rectangle(x + 11, y + 1, 4, 14, LIGHTGREY);
+		ILI9341_Draw_Rectangle(x + 16, y + 1, 4, 14, LIGHTGREY);
+		ILI9341_Draw_Rectangle(x + 21, y + 1, 4, 14, LIGHTGREY);
 	} else if (lvl > 40 && lvl < 60) {
-		ILI9341_Draw_Rectangle(x+1, y+1, 4, 14, ORANGE);
-		ILI9341_Draw_Rectangle(x+6, y+1, 4, 14, ORANGE);
-		ILI9341_Draw_Rectangle(x+11, y+1, 4, 14, ORANGE);
-		ILI9341_Draw_Rectangle(x+16, y+1, 4, 14, LIGHTGREY);
-		ILI9341_Draw_Rectangle(x+21, y+1, 4, 14, LIGHTGREY);
+		ILI9341_Draw_Rectangle(x + 1, y + 1, 4, 14, ORANGE);
+		ILI9341_Draw_Rectangle(x + 6, y + 1, 4, 14, ORANGE);
+		ILI9341_Draw_Rectangle(x + 11, y + 1, 4, 14, ORANGE);
+		ILI9341_Draw_Rectangle(x + 16, y + 1, 4, 14, LIGHTGREY);
+		ILI9341_Draw_Rectangle(x + 21, y + 1, 4, 14, LIGHTGREY);
 	} else if (lvl > 60 && lvl < 80) {
-		ILI9341_Draw_Rectangle(x+1, y+1, 4, 14, DARKGREEN);
-		ILI9341_Draw_Rectangle(x+6, y+1, 4, 14, DARKGREEN);
-		ILI9341_Draw_Rectangle(x+11, y+1, 4, 14, DARKGREEN);
-		ILI9341_Draw_Rectangle(x+16, y+1, 4, 14, DARKGREEN);
-		ILI9341_Draw_Rectangle(x+21, y+1, 4, 14, LIGHTGREY);
+		ILI9341_Draw_Rectangle(x + 1, y + 1, 4, 14, DARKGREEN);
+		ILI9341_Draw_Rectangle(x + 6, y + 1, 4, 14, DARKGREEN);
+		ILI9341_Draw_Rectangle(x + 11, y + 1, 4, 14, DARKGREEN);
+		ILI9341_Draw_Rectangle(x + 16, y + 1, 4, 14, DARKGREEN);
+		ILI9341_Draw_Rectangle(x + 21, y + 1, 4, 14, LIGHTGREY);
 	} else if (lvl > 80 && lvl <= 100) {
-		ILI9341_Draw_Rectangle(x+1, y+1, 4, 14, DARKGREEN);
-		ILI9341_Draw_Rectangle(x+6, y+1, 4, 14, DARKGREEN);
-		ILI9341_Draw_Rectangle(x+11, y+1, 4, 14, DARKGREEN);
-		ILI9341_Draw_Rectangle(x+16, y+1, 4, 14, DARKGREEN);
-		ILI9341_Draw_Rectangle(x+21, y+1, 4, 14, DARKGREEN);
+		ILI9341_Draw_Rectangle(x + 1, y + 1, 4, 14, DARKGREEN);
+		ILI9341_Draw_Rectangle(x + 6, y + 1, 4, 14, DARKGREEN);
+		ILI9341_Draw_Rectangle(x + 11, y + 1, 4, 14, DARKGREEN);
+		ILI9341_Draw_Rectangle(x + 16, y + 1, 4, 14, DARKGREEN);
+		ILI9341_Draw_Rectangle(x + 21, y + 1, 4, 14, DARKGREEN);
 	}
 
 }
@@ -337,32 +362,32 @@ void bat_level(uint8_t lvl, uint16_t x, uint16_t y) {
 void radio_level(uint8_t lvl, uint16_t x, uint16_t y) {
 
 	ILI9341_Draw_Horizontal_Line(x, y, 16, BLACK);
-	ILI9341_Draw_Horizontal_Line(x, y+1, 16, BLACK);
-	ILI9341_Draw_Vertical_Line(x+7, y+2, 18, BLACK);
-	ILI9341_Draw_Vertical_Line(x+8, y+2, 18, BLACK);
-	ILI9341_Random_line(x+1, y+2, x+6, y+7, BLACK);
-	ILI9341_Random_line(x+14, y+2, x+9, y+7, BLACK);
+	ILI9341_Draw_Horizontal_Line(x, y + 1, 16, BLACK);
+	ILI9341_Draw_Vertical_Line(x + 7, y + 2, 18, BLACK);
+	ILI9341_Draw_Vertical_Line(x + 8, y + 2, 18, BLACK);
+	ILI9341_Random_line(x + 1, y + 2, x + 6, y + 7, BLACK);
+	ILI9341_Random_line(x + 14, y + 2, x + 9, y + 7, BLACK);
 
 	if (lvl < 25) {
-		ILI9341_Draw_Rectangle(x+13, y+15, 3, 5, BLACK);
-		ILI9341_Draw_Rectangle(x+18, y+10, 3, 10, LIGHTGREY);
-		ILI9341_Draw_Rectangle(x+23, y+5, 3, 15, LIGHTGREY);
-		ILI9341_Draw_Rectangle(x+28, y, 3, 20, LIGHTGREY);
+		ILI9341_Draw_Rectangle(x + 13, y + 15, 3, 5, BLACK);
+		ILI9341_Draw_Rectangle(x + 18, y + 10, 3, 10, LIGHTGREY);
+		ILI9341_Draw_Rectangle(x + 23, y + 5, 3, 15, LIGHTGREY);
+		ILI9341_Draw_Rectangle(x + 28, y, 3, 20, LIGHTGREY);
 	} else if (lvl > 25 && lvl < 50) {
-		ILI9341_Draw_Rectangle(x+13, y+15, 3, 5, BLACK);
-		ILI9341_Draw_Rectangle(x+18, y+10, 3, 10, BLACK);
-		ILI9341_Draw_Rectangle(x+23, y+5, 3, 15, LIGHTGREY);
-		ILI9341_Draw_Rectangle(x+28, y, 3, 20, LIGHTGREY);
+		ILI9341_Draw_Rectangle(x + 13, y + 15, 3, 5, BLACK);
+		ILI9341_Draw_Rectangle(x + 18, y + 10, 3, 10, BLACK);
+		ILI9341_Draw_Rectangle(x + 23, y + 5, 3, 15, LIGHTGREY);
+		ILI9341_Draw_Rectangle(x + 28, y, 3, 20, LIGHTGREY);
 	} else if (lvl > 50 && lvl < 75) {
-		ILI9341_Draw_Rectangle(x+13, y+15, 3, 5, BLACK);
-		ILI9341_Draw_Rectangle(x+18, y+10, 3, 10, BLACK);
-		ILI9341_Draw_Rectangle(x+23, y+5, 3, 15, BLACK);
-		ILI9341_Draw_Rectangle(x+28, y, 3, 20, LIGHTGREY);
+		ILI9341_Draw_Rectangle(x + 13, y + 15, 3, 5, BLACK);
+		ILI9341_Draw_Rectangle(x + 18, y + 10, 3, 10, BLACK);
+		ILI9341_Draw_Rectangle(x + 23, y + 5, 3, 15, BLACK);
+		ILI9341_Draw_Rectangle(x + 28, y, 3, 20, LIGHTGREY);
 	} else if (lvl > 75 && lvl < 100) {
-		ILI9341_Draw_Rectangle(x+13, y+15, 3, 5, BLACK);
-		ILI9341_Draw_Rectangle(x+18, y+10, 3, 10, BLACK);
-		ILI9341_Draw_Rectangle(x+23, y+5, 3, 15, BLACK);
-		ILI9341_Draw_Rectangle(x+28, y, 3, 20, BLACK);
+		ILI9341_Draw_Rectangle(x + 13, y + 15, 3, 5, BLACK);
+		ILI9341_Draw_Rectangle(x + 18, y + 10, 3, 10, BLACK);
+		ILI9341_Draw_Rectangle(x + 23, y + 5, 3, 15, BLACK);
+		ILI9341_Draw_Rectangle(x + 28, y, 3, 20, BLACK);
 	}
 }
 

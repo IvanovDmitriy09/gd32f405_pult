@@ -40,7 +40,7 @@
 
 __IO uint32_t step = 1;
 
-uint8_t a = 0, b = 0, c = 0, out_symbol, out_state;
+uint8_t a = 0, b = 0, c = 0, out_symbol1, out_symbol2, out_symbol3, out_state;
 /*!
  \brief      this function handles NMI exception
  \param[in]  none
@@ -159,34 +159,34 @@ void turn_on_line(uint8_t out) {
 		gpio_bit_set(GPIOB, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7);
 		gpio_bit_reset(GPIOB, GPIO_PIN_5);
 		if (RESET == gpio_input_bit_get(GPIOD, GPIO_PIN_2)) {
-			out_symbol = 1;
+			out_symbol1 = 1;
 		} else if (RESET == gpio_input_bit_get(GPIOB, GPIO_PIN_3)) {
-			out_symbol = 2;
+			out_symbol1 = 2;
 		} else if (RESET == gpio_input_bit_get(GPIOB, GPIO_PIN_4)) {
-			out_symbol = 3;
-		} else out_symbol = 11;
+			out_symbol1 = 3;
+		} else out_symbol1 = 0;
 		break;
 	case 2:
 		gpio_bit_set(GPIOB, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7);
 		gpio_bit_reset(GPIOB, GPIO_PIN_6);
 		if (RESET == gpio_input_bit_get(GPIOD, GPIO_PIN_2)) {
-			out_symbol = 4;
+			out_symbol2 = 4;
 		} else if (RESET == gpio_input_bit_get(GPIOB, GPIO_PIN_3)) {
-			out_symbol = 5;
+			out_symbol2 = 5;
 		} else if (RESET == gpio_input_bit_get(GPIOB, GPIO_PIN_4)) {
-			out_symbol = 6;
-		} else out_symbol = 22;
+			out_symbol2 = 6;
+		} else out_symbol2 = 0;
 		break;
 	case 3:
 		gpio_bit_set(GPIOB, GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7);
 		gpio_bit_reset(GPIOB, GPIO_PIN_7);
 		if (RESET == gpio_input_bit_get(GPIOD, GPIO_PIN_2)) {
-			out_symbol = 7;
+			out_symbol3 = 7;
 		} else if (RESET == gpio_input_bit_get(GPIOB, GPIO_PIN_3)) {
-			out_symbol = 8;
+			out_symbol3 = 8;
 		} else if (RESET == gpio_input_bit_get(GPIOB, GPIO_PIN_4)) {
-			out_symbol = 9;
-		} else out_symbol = 33;
+			out_symbol3 = 9;
+		} else out_symbol3 = 0;
 		break;
 	}
 
